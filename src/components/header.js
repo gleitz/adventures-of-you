@@ -8,11 +8,11 @@ const Header = ({ siteTitle }) => (
   <header
     style={{
       background: `white`,
-      marginBottom: `1.45rem`,
+      margin: `1.45rem 0`,
     }}
   >
     <div style={{ 'borderBottom': '1px solid #ccc'}}>
-      <FlatText text={siteTitle} fontSize="60px" />
+      <FlatText text={siteTitle} fontSize="2em" />
     </div>
   </header>
 )

@@ -142,7 +142,7 @@ class EmotionalCaptcha extends React.Component {
           </div>
 
           <div class="footer">
-            <a href="javascript:void(0)" class="button">
+            <a href="/twenty-questions" class="button">
               Verify
             </a>
           </div>

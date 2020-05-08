@@ -31,7 +31,8 @@ const generateFlatSpot = (text, gifSrc, stillSrc) => {
             textShadow: "rgba(0, 0, 0, 0.8) 0px 0px 100px",
           }}
           text={text}
-          fontSize="60px"
+          overflowWrap="normal"
+          fontSize="5rem"
           width="4"
         />
       </FlatTextCentered>

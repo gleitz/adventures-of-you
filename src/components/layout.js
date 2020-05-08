@@ -25,18 +25,9 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-          display: "flex",
-          "minHeight": "100vh",
-          "flexDirection": "column",
-        }}
-      >
+      <div className="page-content-holder">
         <Header siteTitle={data.site.siteMetadata.title} />
-        <div style={{ flexGrow: 1 }}>
+        <div className="page-content">
           <main>{children}</main>
         </div>
         <footer>© {new Date().getFullYear() + 1000}, The Great Hu</footer>
