@@ -31,7 +31,7 @@ const Layout = ({ children }) => {
           maxWidth: 960,
           padding: `0 1.0875rem 1.45rem`,
           display: "flex",
-          "min-height": "100vh",
+          "minHeight": "100vh",
           "flexDirection": "column",
         }}
       >

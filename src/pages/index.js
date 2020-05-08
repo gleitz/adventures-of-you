@@ -10,7 +10,7 @@ import Still from "../images/secret-paths.jpg"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <div style={{ "text-align": "right" }}>
+    <div style={{ "textAlign": "right" }}>
       “Though we scorn the thought that fickle Fate
       <br />
       Has Destiny in her hand,

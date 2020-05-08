@@ -11,7 +11,7 @@ const Header = ({ siteTitle }) => (
       marginBottom: `1.45rem`,
     }}
   >
-    <div style={{ 'border-bottom': '1px solid #ccc'}}>
+    <div style={{ 'borderBottom': '1px solid #ccc'}}>
       <FlatText text={siteTitle} fontSize="60px" />
     </div>
   </header>
