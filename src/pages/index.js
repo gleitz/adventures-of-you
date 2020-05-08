@@ -1,20 +1,48 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import { generateFlatSpot } from "../utils"
+
+import Gif from "../images/great-hu.gif"
+import Still from "../images/secret-paths.jpg"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+    <div style={{ "text-align": "right" }}>
+      “Though we scorn the thought that fickle Fate
+      <br />
+      Has Destiny in her hand,
+      <br />
+      We all pay tribute at her gate
+      <br />
+      And bow low at her command.”
+      <br />
     </div>
-    <Link to="/page-2/">Go to page 2</Link>
+    <br />
+    <div>
+      The year is 3020, and the robot overlords have taken over. Every element
+      of life is now conducted entirely by screens — work, concerts, and dating
+      are now confined to pixels alone. There is no domain untouched by social
+      digitaling. Big Tekka has trapped us apart, knowing that humanity’s true
+      powers are unleashed only when humans huddle together.
+    </div>
+    <br />
+    <div>
+      Hu, the humanoid representative of all AI and leader on Earth, has
+      re-appeared, but must gather complete understanding of the core human
+      emotions of Love, Courage, Joy, Gratitude, Jealousy, Fear, Shame, and
+      Pride.
+    </div>
+    <br />
+    <div>
+      You, dear reader, must summon all the power and wisdom of your precious
+      emotions to snatch triumph from the jaws of digital defeat. You must
+      choose, but choose wisely.
+    </div>
+    <br />
+    <a href="/emotional-captcha">{generateFlatSpot("ENTER", Gif, Still)}</a>
   </Layout>
 )
 

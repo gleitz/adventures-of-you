@@ -1,0 +1,221 @@
+.captcha-image {
+    width: 100px;
+}
+
+.container {
+    height: 524.7px; margin-top: 29.15px; width: 343.594px;
+}
+
+.content { width: 318.609px }
+
+.loading {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-animation: rotation 2s infinite linear;
+    width: 131px;
+    height: 131px
+}
+
+@media (max-width: 767px) {
+    .loading {
+        width: 50px;
+        height: 50px
+    }
+}
+
+@-webkit-keyframes rotation {
+    from {
+        -webkit-transform: translate(-50%, -50%) rotate(0deg)
+    }
+    to {
+        -webkit-transform: translate(-50%, -50%) rotate(359deg)
+    }
+}
+
+.captcha {
+    overflow: auto
+}
+
+.container {
+    height: auto;
+    margin: 5vh auto;
+    -webkit-box-shadow: 5px 5px 3px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 5px 5px 3px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 5px 5px 3px 0px rgba(0, 0, 0, 0.15)
+}
+
+@media (max-width: 767px) {
+    .container {
+        height: 70vh;
+        margin: 15vh auto
+    }
+}
+
+.captcha-container {
+    background-color: #fff;
+    width: 100%;
+    height: auto;
+    padding: 11.5px;
+    border: 1px solid #d0d0d0
+}
+
+.captcha-container .header {
+    background-color: #4990e2;
+    padding-top: 5%;
+    padding-left: 5%;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-bottom: 14px;
+    overflow: hidden;
+    height: calc(20% - 14px)
+}
+
+@media (max-width: 767px) {
+    .captcha-container .header {
+        padding-top: 5%
+    }
+}
+
+.captcha-container .header p {
+    font-size: 20px;
+    line-height: 19.2px;
+    color: #fff
+}
+
+@media (max-width: 767px) {
+    .captcha-container .header p {
+        font-size: 12px;
+        line-break: 15px;
+        margin-left: 15px
+    }
+}
+
+.captcha-container .content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    height: auto;
+}
+
+.captcha-image {
+    height: calc(33% - 2px);
+    margin: 2px
+}
+
+.captcha-image.active {
+    border: 6px solid #4990e2
+}
+
+.captcha-image img {
+    display: block;
+    margin: auto;
+    max-width: 100%
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 20%;
+    padding: 20px 25px;
+    border-left: 1px solid #d0d0d0;
+    border-right: 1px solid #d0d0d0;
+    border-bottom: 1px solid #d0d0d0
+}
+
+.footer .refresh {
+    display: inline-block
+}
+
+.footer .refresh img {
+    display: block;
+    margin: auto;
+    overflow: hidden
+}
+
+@media (max-width: 767px) {
+    .footer .refresh img {
+        width: 30px
+    }
+}
+
+.footer .button {
+    width: 100%;
+    padding: 24px 0;
+    border-radius: 4px;
+    background-color: #4990e2;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px
+}
+
+.footer .button:hover {
+    background-color: #3274d6
+}
+
+@media (max-width: 767px) {
+    .footer .button {
+        width: 155px;
+        padding: 10px 0
+    }
+}
+
+.messages {
+    overflow: auto
+}
+
+.message {
+    display: none
+}
+
+.message.message-error {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%)
+}
+
+.message.message-success {
+    margin-left: 10%;
+    padding-top: 5%;
+    margin-bottom: 50px
+}
+
+.message.message-success .message-text {
+    display: none
+}
+
+.message.message-success ul {
+    list-style: none;
+    margin-top: 50px
+}
+
+.message.message-success ul li {
+    font-size: 100px;
+    line-height: 130px
+}
+
+@media (max-width: 767px) {
+    .message.message-success ul li {
+        font-size: 25px;
+        line-height: 35px
+    }
+}
+
+.message h2 {
+    font-size: 100px;
+    font-weight: normal;
+    line-height: 130px
+}
+
+@media (max-width: 767px) {
+    .message h2 {
+        font-size: 25px;
+        line-height: 35px
+    }
+}
