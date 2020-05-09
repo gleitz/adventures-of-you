@@ -1,0 +1,4 @@
+module.exports = {
+  JSBIN_API_KEY: "JSBIN_API_KEY",
+  JSBIN_BIN_ID: "JSBIN_BIN_ID",
+}

@@ -2,7 +2,7 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { generateFlatSpot } from "../utils"
+import { generateFlatSpot, saveEmotion } from "../utils"
 
 import Gif from "../images/great-hu.gif"
 import Still from "../images/secret-paths.jpg"
@@ -30,7 +30,9 @@ class TwentyQuestionsPage extends React.Component {
 
     today = mm + "/" + dd + "/" + yyyy
 
-    const color = document.getElementsByName("color")[0].style['background-color']
+    const color = document.getElementsByName("color")[0].style[
+      "background-color"
+    ]
     const animal = document.getElementsByName("animal")[0].value.toUpperCase()
     const emotion1 = document.getElementsByName("emotion-in-2020-1")[0].value
     const emotion2 = document.getElementsByName("emotion-in-2020-2")[0].value
@@ -43,6 +45,18 @@ class TwentyQuestionsPage extends React.Component {
       alert("You must select an emotion")
       return
     }
+
+    const emotion = {
+      animal,
+      emotion1,
+      emotion2,
+      emotion3,
+      questionLove,
+      questionLaugh,
+      questionNight,
+      questionEmotion,
+    }
+
     const firstPage = `* THE GREAT HU'S EMOTIONAL TRAINING *
 
 ${today}
@@ -162,7 +176,9 @@ ${questionEmotion}
 
     doc.save("THE-GREAT-HU-EMOTIONAL-TRAINING-3020.pdf")
 
-    window.location = "/phone-call-to-god"
+    saveEmotion(emotion).then((data) => {
+      window.location = "/phone-call-to-god"
+    })
   }
 
   render() {

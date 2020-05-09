@@ -1,6 +1,10 @@
 import React from "react"
 import styled from "styled-components"
 
+const JsonBinIoApi = require("jsonbin-io-api")
+
+import { JSBIN_API_KEY, JSBIN_BIN_ID } from "gatsby-env-variables"
+
 import Spot from "./components/spot"
 import FlatText from "./components/flattext"
 
@@ -16,6 +20,32 @@ const FlatTextCentered = styled.div`
   margin-top: -40px;
   pointer-events: none;
 `
+
+let jsonApi
+const getEmotions = () => {
+  if (!jsonApi) {
+    jsonApi = new JsonBinIoApi(JSBIN_API_KEY)
+  }
+  return jsonApi.readBin({
+    id: JSBIN_BIN_ID,
+    version: "latest",
+  })
+}
+
+const saveEmotion = emotion => {
+  if (!jsonApi) {
+    jsonApi = new JsonBinIoApi(JSBIN_API_KEY)
+  }
+  return getEmotions().then(data => {
+    data.emotions.push(emotion)
+    return jsonApi
+      .updateBin({
+        id: JSBIN_BIN_ID,
+        data,
+        versioning: false,
+      })
+  })
+}
 
 const generateFlatSpot = (text, gifSrc, stillSrc) => {
   return (
@@ -71,4 +101,4 @@ const shuffle = array => {
   return array
 }
 
-export { generateFlatSpot, getRandomInt, shuffle }
+export { generateFlatSpot, getRandomInt, shuffle, saveEmotion }
