@@ -1,7 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `Adventures of You`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `You, dear reader, must summon all the power and wisdom of your precious
+      emotions to snatch triumph from the jaws of digital defeat. You must
+      choose, but choose wisely.`,
     author: `@gatsbyjs`,
   },
   plugins: [
