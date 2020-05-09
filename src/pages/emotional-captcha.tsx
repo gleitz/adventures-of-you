@@ -13,7 +13,7 @@ import flowers from "../images/flowers.jpg"
 import pizza from "../images/pizza.jpg"
 import iceCream from "../images/ice-cream.jpg"
 import dishes from "../images/dishes.jpg"
-import vape from "../images/vape.jpg"
+import dbs from "../images/dbs.jpg"
 import kitten from "../images/kitten.jpg"
 import lowBat from "../images/low-bat.jpg"
 import hugging from "../images/hugging.jpg"
@@ -41,7 +41,7 @@ const ITEMS = [
     isActive: false,
   },
   {
-    image: vape,
+    image: dbs,
     isAnnoying: true,
     isActive: false,
   },
@@ -108,7 +108,8 @@ class EmotionalCaptcha extends React.Component {
           <div className="captcha-container">
             <div className="header">
               <p>
-                Select all squares that <strong>annoy you</strong>.
+                Select all squares that contain something{" "}
+                <strong>annoying</strong>.
               </p>
               <input type="hidden" value="selfiesticks" name="category" />
             </div>
