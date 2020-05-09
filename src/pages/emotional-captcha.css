@@ -1,12 +1,12 @@
 .captcha-image {
-    width: 100px;
+    width: 200px;
 }
 
 .container {
-    height: 524.7px; margin-top: 29.15px; width: 343.594px;
+    height: 524.7px; margin-top: 29.15px; width: 640px;
 }
 
-.content { width: 318.609px }
+.content { width: 620px }
 
 .loading {
     display: none;
@@ -101,17 +101,18 @@
 
 .captcha-image {
     height: calc(33% - 2px);
-    margin: 2px
+    margin: 2px;
+    border: 6px solid #FFF;
 }
 
 .captcha-image.active {
-    border: 6px solid #4990e2
+    border: 6px solid #ff0000
 }
 
 .captcha-image img {
     display: block;
     margin: auto;
-    max-width: 100%
+    max-width: 188px;
 }
 
 .footer {

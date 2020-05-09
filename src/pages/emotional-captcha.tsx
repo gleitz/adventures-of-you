@@ -7,17 +7,106 @@ import SEO from "../components/seo"
 
 import "./emotional-captcha.css"
 
-class EmotionalCaptcha extends React.Component {
+import flowers from "../images/flowers.jpg"
+import pizza from "../images/pizza.jpg"
+import iceCream from "../images/ice-cream.jpg"
+import dishes from "../images/dishes.jpg"
+import socks from "../images/socks.jpg"
+import kitten from "../images/kitten.jpg"
+import lowBat from "../images/low-bat.jpg"
+import hugging from "../images/hugging.jpg"
+import tp from "../images/tp.jpg"
 
+/**
+ * Shuffles array in place.
+ * @param {Array} a items An array containing the items.
+ */
+function shuffle(a) {
+  var j, x, i
+  for (i = a.length - 1; i > 0; i--) {
+    j = Math.floor(Math.random() * (i + 1))
+    x = a[i]
+    a[i] = a[j]
+    a[j] = x
+  }
+  return a
+}
+
+class EmotionalCaptcha extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      isActive: false
+      items: [
+        {
+          image: pizza,
+          isAnnoying: false,
+          isActive: false,
+        },
+        {
+          image: flowers,
+          isAnnoying: false,
+          isActive: false,
+        },
+        {
+          image: iceCream,
+          isAnnoying: true,
+          isActive: false,
+        },
+        {
+          image: dishes,
+          isAnnoying: true,
+          isActive: false,
+        },
+        {
+          image: socks,
+          isAnnoying: false,
+          isActive: false,
+        },
+        {
+          image: kitten,
+          isAnnoying: false,
+          isActive: false,
+        },
+        {
+          image: lowBat,
+          isAnnoying: true,
+          isActive: false,
+        },
+        {
+          image: hugging,
+          isAnnoying: false,
+          isActive: false,
+        },
+        {
+          image: tp,
+          isAnnoying: true,
+          isActive: false,
+        },
+      ],
     }
+    shuffle(this.state.items)
   }
 
-  handleClick = () => {
-    this.setState(state => ({ isActive: !state.isActive }));
+  handleClick = e => {
+    const index = e.target.getAttribute("data-key")
+    this.setState(state => {
+      const item = state.items[index]
+      item.isActive = !item.isActive
+      return state
+    })
+  }
+
+  checkImages = () => {
+    let valid = true
+    this.state.items.forEach(item => {
+      if (item.isActive !== item.isAnnoying) {
+        location.reload()
+        valid = false
+      }
+    })
+    if (valid) {
+      window.location = "/twenty-questions"
+    }
   }
 
   render() {
@@ -26,123 +115,34 @@ class EmotionalCaptcha extends React.Component {
         <SEO title="Emotional Captcha" />
         <h1>Emotional Captcha</h1>
         <div>To enter the experience we need to check your humanity.</div>
-        <div
-          class="container"
-        >
+        <div class="container">
           <div class="captcha-container">
             <div class="header">
               <p>
-                Select all squares<br />that make you <strong>angry</strong>
+                Select all squares that <strong>annoy you</strong>.
               </p>
               <input type="hidden" value="selfiesticks" name="category" />
             </div>
 
             <div class="content">
-              <div
-                class={this.state.isActive ? 'captcha-image active' : 'captcha-image'}
-                data-token="$1$/afeNSK.$BwLqdMpYWhK7kt5BFUp0v."
-                data-id="9"
-
-              >
-                <img
-                  src="http://www.humansnotinvited.com/captcha/image.php?image_name=$1$/afeNSK.$BwLqdMpYWhK7kt5BFUp0v.&amp;id=9"
-                  alt=""
-                  onClick={this.handleClick}
-                />
-              </div>
-              <div
-                class="captcha-image"
-                data-token="$1$CCczlEWq$82KOz3nHz3a6ulIITxqgJ."
-                data-id="5"
-
-              >
-                <img
-                  src="http://www.humansnotinvited.com/captcha/image.php?image_name=$1$CCczlEWq$82KOz3nHz3a6ulIITxqgJ.&amp;id=5"
-                  alt=""
-                />
-              </div>
-              <div
-                class="captcha-image"
-                data-token="$1$YOZWcR/y$R/Bpnc1Qdlb6ZP/tJLdCT/"
-                data-id="8"
-
-              >
-                <img
-                  src="http://www.humansnotinvited.com/captcha/image.php?image_name=$1$YOZWcR/y$R/Bpnc1Qdlb6ZP/tJLdCT/&amp;id=8"
-                  alt=""
-                />
-              </div>
-              <div
-                class="captcha-image"
-                data-token="$1$467UYtxo$NZF18b6xvMV6pO24PtrXU1"
-                data-id="1"
-
-              >
-                <img
-                  src="http://www.humansnotinvited.com/captcha/image.php?image_name=$1$467UYtxo$NZF18b6xvMV6pO24PtrXU1&amp;id=1"
-                  alt=""
-                />
-              </div>
-              <div
-                class="captcha-image"
-                data-token="$1$Qkjh2TyP$gPlNxN79phX9veIUaJBc9."
-                data-id="7"
-
-              >
-                <img
-                  src="http://www.humansnotinvited.com/captcha/image.php?image_name=$1$Qkjh2TyP$gPlNxN79phX9veIUaJBc9.&amp;id=7"
-                  alt=""
-                />
-              </div>
-              <div
-                class="captcha-image"
-                data-token="$1$Bj2B51Zh$qTUbsw7VIvJwiQgEMDG0m."
-                data-id="7"
-
-              >
-                <img
-                  src="http://www.humansnotinvited.com/captcha/image.php?image_name=$1$Bj2B51Zh$qTUbsw7VIvJwiQgEMDG0m.&amp;id=7"
-                  alt=""
-                />
-              </div>
-              <div
-                class="captcha-image"
-                data-token="$1$k6dqfwm9$SQTSR1qTi43nNfppbLHmm/"
-                data-id="4"
-
-              >
-                <img
-                  src="http://www.humansnotinvited.com/captcha/image.php?image_name=$1$k6dqfwm9$SQTSR1qTi43nNfppbLHmm/&amp;id=4"
-                  alt=""
-                />
-              </div>
-              <div
-                class="captcha-image"
-                data-token="$1$iFC0GHlH$9Cfx/bDywRCSkOKLuO9xu."
-                data-id="3"
-
-              >
-                <img
-                  src="http://www.humansnotinvited.com/captcha/image.php?image_name=$1$iFC0GHlH$9Cfx/bDywRCSkOKLuO9xu.&amp;id=3"
-                  alt=""
-                />
-              </div>
-              <div
-                class="captcha-image"
-                data-token="$1$Svy7kPTJ$TcBr7ADKQljgEzFiMZRhJ/"
-                data-id="6"
-
-              >
-                <img
-                  src="http://www.humansnotinvited.com/captcha/image.php?image_name=$1$Svy7kPTJ$TcBr7ADKQljgEzFiMZRhJ/&amp;id=6"
-                  alt=""
-                />
-              </div>{" "}
+              {this.state.items.map((item, i) => (
+                <div
+                  className={
+                    item.isActive ? "captcha-image active" : "captcha-image"
+                  }
+                >
+                  <img
+                    data-key={i}
+                    src={item.image}
+                    onClick={this.handleClick}
+                  />
+                </div>
+              ))}{" "}
             </div>
           </div>
 
           <div class="footer">
-            <a href="/twenty-questions" class="button">
+            <a onClick={this.checkImages} href="#" class="button">
               Verify
             </a>
           </div>
@@ -150,7 +150,6 @@ class EmotionalCaptcha extends React.Component {
       </Layout>
     )
   }
-
 }
 
 export default EmotionalCaptcha

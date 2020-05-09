@@ -13,7 +13,7 @@ const TwentyQuestionsPage = () => (
   <Layout>
     <SEO title="Twenty Questions" />
     <div className="question">
-      <label for="color">What is the color of your current emotion?</label>
+      <label for="color">What color is your current emotion?</label>
       <input
         name="color"
         className="jscolor {valueElement:null} worksheet-field"
@@ -99,7 +99,7 @@ const TwentyQuestionsPage = () => (
     </div>
 
     <div className="question">
-      <label for="emotion-in-2020">How do you most want to feel?</label>
+      <label for="emotion-in-2020">List your top 3 emotions from the past week:</label>
       <select name="emotion-in-2020-1">
         <option value="" disabled="" selected="" hidden="">
           ...
@@ -110,8 +110,11 @@ const TwentyQuestionsPage = () => (
         <option name="emotion-in-2020-1" value="Amused">
           Amused
         </option>
-        <option name="emotion-in-2020-1" value="Brave">
-          Brave
+        <option name="emotion-in-2020-1" value="Anxious">
+          Anxious
+        </option>
+        <option name="emotion-in-2020-1" value="Bored">
+          Bored
         </option>
         <option name="emotion-in-2020-1" value="Busy">
           Busy
@@ -122,26 +125,20 @@ const TwentyQuestionsPage = () => (
         <option name="emotion-in-2020-1" value="Capable">
           Capable
         </option>
-        <option name="emotion-in-2020-1" value="Celebrated">
-          Celebrated
-        </option>
         <option name="emotion-in-2020-1" value="Content">
           Content
         </option>
         <option name="emotion-in-2020-1" value="Challenged">
           Challenged
         </option>
-        <option name="emotion-in-2020-1" value="Delighted">
-          Delighted
-        </option>
         <option name="emotion-in-2020-1" value="Determined">
           Determined
         </option>
+        <option name="emotion-in-2020-1" value="Fearful">
+          Fearful
+        </option>
         <option name="emotion-in-2020-1" value="Focused">
           Focused
-        </option>
-        <option name="emotion-in-2020-1" value="Free">
-          Free
         </option>
         <option name="emotion-in-2020-1" value="Happy">
           Happy
@@ -149,23 +146,26 @@ const TwentyQuestionsPage = () => (
         <option name="emotion-in-2020-1" value="Healthy">
           Healthy
         </option>
+        <option name="emotion-in-2020-1" value="Lazy">
+          Lazy
+        </option>
         <option name="emotion-in-2020-1" value="Loved">
           Loved
+        </option>
+        <option name="emotion-in-2020-1" value="Miserable">
+          Miserable
         </option>
         <option name="emotion-in-2020-1" value="Optimistic">
           Optimistic
         </option>
+        <option name="emotion-in-2020-1" value="Overwhelmed">
+          Overwhelmed
+        </option>
         <option name="emotion-in-2020-1" value="Peaceful">
           Peaceful
         </option>
-        <option name="emotion-in-2020-1" value="Proud">
-          Proud
-        </option>
         <option name="emotion-in-2020-1" value="Relaxed">
           Relaxed
-        </option>
-        <option name="emotion-in-2020-1" value="Revered">
-          Revered
         </option>
         <option name="emotion-in-2020-1" value="Safe">
           Safe
@@ -173,14 +173,17 @@ const TwentyQuestionsPage = () => (
         <option name="emotion-in-2020-1" value="Secure">
           Secure
         </option>
-        <option name="emotion-in-2020-1" value="Strong">
-          Strong
+        <option name="emotion-in-2020-1" value="Stressed">
+          Stressed
         </option>
         <option name="emotion-in-2020-1" value="Successful">
           Successful
         </option>
         <option name="emotion-in-2020-1" value="Supported">
           Supported
+        </option>
+        <option name="emotion-in-2020-1" value="Trapped">
+          Trapped
         </option>
         <option name="emotion-in-2020-1" value="Understood">
           Understood
@@ -199,8 +202,11 @@ const TwentyQuestionsPage = () => (
         <option name="emotion-in-2020-2" value="Amused">
           Amused
         </option>
-        <option name="emotion-in-2020-2" value="Brave">
-          Brave
+        <option name="emotion-in-2020-2" value="Anxious">
+          Anxious
+        </option>
+        <option name="emotion-in-2020-2" value="Bored">
+          Bored
         </option>
         <option name="emotion-in-2020-2" value="Busy">
           Busy
@@ -211,26 +217,20 @@ const TwentyQuestionsPage = () => (
         <option name="emotion-in-2020-2" value="Capable">
           Capable
         </option>
-        <option name="emotion-in-2020-2" value="Celebrated">
-          Celebrated
-        </option>
         <option name="emotion-in-2020-2" value="Content">
           Content
         </option>
         <option name="emotion-in-2020-2" value="Challenged">
           Challenged
         </option>
-        <option name="emotion-in-2020-2" value="Delighted">
-          Delighted
-        </option>
         <option name="emotion-in-2020-2" value="Determined">
           Determined
         </option>
+        <option name="emotion-in-2020-2" value="Fearful">
+          Fearful
+        </option>
         <option name="emotion-in-2020-2" value="Focused">
           Focused
-        </option>
-        <option name="emotion-in-2020-2" value="Free">
-          Free
         </option>
         <option name="emotion-in-2020-2" value="Happy">
           Happy
@@ -238,23 +238,26 @@ const TwentyQuestionsPage = () => (
         <option name="emotion-in-2020-2" value="Healthy">
           Healthy
         </option>
+        <option name="emotion-in-2020-2" value="Lazy">
+          Lazy
+        </option>
         <option name="emotion-in-2020-2" value="Loved">
           Loved
+        </option>
+        <option name="emotion-in-2020-2" value="Miserable">
+          Miserable
         </option>
         <option name="emotion-in-2020-2" value="Optimistic">
           Optimistic
         </option>
+        <option name="emotion-in-2020-2" value="Overwhelmed">
+          Overwhelmed
+        </option>
         <option name="emotion-in-2020-2" value="Peaceful">
           Peaceful
         </option>
-        <option name="emotion-in-2020-2" value="Proud">
-          Proud
-        </option>
         <option name="emotion-in-2020-2" value="Relaxed">
           Relaxed
-        </option>
-        <option name="emotion-in-2020-2" value="Revered">
-          Revered
         </option>
         <option name="emotion-in-2020-2" value="Safe">
           Safe
@@ -262,14 +265,17 @@ const TwentyQuestionsPage = () => (
         <option name="emotion-in-2020-2" value="Secure">
           Secure
         </option>
-        <option name="emotion-in-2020-2" value="Strong">
-          Strong
+        <option name="emotion-in-2020-2" value="Stressed">
+          Stressed
         </option>
         <option name="emotion-in-2020-2" value="Successful">
           Successful
         </option>
         <option name="emotion-in-2020-2" value="Supported">
           Supported
+        </option>
+        <option name="emotion-in-2020-2" value="Trapped">
+          Trapped
         </option>
         <option name="emotion-in-2020-2" value="Understood">
           Understood
@@ -282,88 +288,91 @@ const TwentyQuestionsPage = () => (
         <option value="" disabled="" selected="" hidden="">
           ...
         </option>
-        <option name="emotion-in-2020-3" value="Accomplished">
+        <option name="emotion-in-3020-3" value="Accomplished">
           Accomplished
         </option>
-        <option name="emotion-in-2020-3" value="Amused">
+        <option name="emotion-in-3020-3" value="Amused">
           Amused
         </option>
-        <option name="emotion-in-2020-3" value="Brave">
-          Brave
+        <option name="emotion-in-3020-3" value="Anxious">
+          Anxious
         </option>
-        <option name="emotion-in-2020-3" value="Busy">
+        <option name="emotion-in-3020-3" value="Bored">
+          Bored
+        </option>
+        <option name="emotion-in-3020-3" value="Busy">
           Busy
         </option>
-        <option name="emotion-in-2020-3" value="Calm">
+        <option name="emotion-in-3020-3" value="Calm">
           Calm
         </option>
-        <option name="emotion-in-2020-3" value="Capable">
+        <option name="emotion-in-3020-3" value="Capable">
           Capable
         </option>
-        <option name="emotion-in-2020-3" value="Celebrated">
-          Celebrated
-        </option>
-        <option name="emotion-in-2020-3" value="Content">
+        <option name="emotion-in-3020-3" value="Content">
           Content
         </option>
-        <option name="emotion-in-2020-3" value="Challenged">
+        <option name="emotion-in-3020-3" value="Challenged">
           Challenged
         </option>
-        <option name="emotion-in-2020-3" value="Delighted">
-          Delighted
-        </option>
-        <option name="emotion-in-2020-3" value="Determined">
+        <option name="emotion-in-3020-3" value="Determined">
           Determined
         </option>
-        <option name="emotion-in-2020-3" value="Focused">
+        <option name="emotion-in-3020-3" value="Fearful">
+          Fearful
+        </option>
+        <option name="emotion-in-3020-3" value="Focused">
           Focused
         </option>
-        <option name="emotion-in-2020-3" value="Free">
-          Free
-        </option>
-        <option name="emotion-in-2020-3" value="Happy">
+        <option name="emotion-in-3020-3" value="Happy">
           Happy
         </option>
-        <option name="emotion-in-2020-3" value="Healthy">
+        <option name="emotion-in-3020-3" value="Healthy">
           Healthy
         </option>
-        <option name="emotion-in-2020-3" value="Loved">
+        <option name="emotion-in-3020-3" value="Lazy">
+          Lazy
+        </option>
+        <option name="emotion-in-3020-3" value="Loved">
           Loved
         </option>
-        <option name="emotion-in-2020-3" value="Optimistic">
+        <option name="emotion-in-3020-3" value="Miserable">
+          Miserable
+        </option>
+        <option name="emotion-in-3020-3" value="Optimistic">
           Optimistic
         </option>
-        <option name="emotion-in-2020-3" value="Peaceful">
+        <option name="emotion-in-3020-3" value="Overwhelmed">
+          Overwhelmed
+        </option>
+        <option name="emotion-in-3020-3" value="Peaceful">
           Peaceful
         </option>
-        <option name="emotion-in-2020-3" value="Proud">
-          Proud
-        </option>
-        <option name="emotion-in-2020-3" value="Relaxed">
+        <option name="emotion-in-3020-3" value="Relaxed">
           Relaxed
         </option>
-        <option name="emotion-in-2020-3" value="Revered">
-          Revered
-        </option>
-        <option name="emotion-in-2020-3" value="Safe">
+        <option name="emotion-in-3020-3" value="Safe">
           Safe
         </option>
-        <option name="emotion-in-2020-3" value="Secure">
+        <option name="emotion-in-3020-3" value="Secure">
           Secure
         </option>
-        <option name="emotion-in-2020-3" value="Strong">
-          Strong
+        <option name="emotion-in-3020-3" value="Stressed">
+          Stressed
         </option>
-        <option name="emotion-in-2020-3" value="Successful">
+        <option name="emotion-in-3020-3" value="Successful">
           Successful
         </option>
-        <option name="emotion-in-2020-3" value="Supported">
+        <option name="emotion-in-3020-3" value="Supported">
           Supported
         </option>
-        <option name="emotion-in-2020-3" value="Understood">
+        <option name="emotion-in-3020-3" value="Trapped">
+          Trapped
+        </option>
+        <option name="emotion-in-3020-3" value="Understood">
           Understood
         </option>
-        <option name="emotion-in-2020-3" value="Wild">
+        <option name="emotion-in-3020-3" value="Wild">
           Wild
         </option>
       </select>
@@ -371,21 +380,21 @@ const TwentyQuestionsPage = () => (
 
     <div className="question">
       <label for="take-a-moment-to-think-about-how-youll-achieve-your-desired-feelings-in-2020">
-        What's something you love more than anything else?
+        What's something you love? Why?
       </label>
       <textarea className="worksheet-field" name="question-1"></textarea>
     </div>
 
     <div className="question">
       <label for="is-there-anything-you-can-stop-doing-in-2020">
-        What do you hate most?
+        What's something that made you laugh? Links please!
       </label>
       <textarea className="worksheet-field" name="question-2"></textarea>
     </div>
 
     <div className="question">
       <label for="is-there-anything-you-can-start-doing-in-2020">
-        What do you fear?
+        What keeps you up at night?
       </label>
       <textarea className="worksheet-field" name="question-3"></textarea>
     </div>
