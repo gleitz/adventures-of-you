@@ -21,6 +21,7 @@
     "jsonbin-io-api": "^1.0.2",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
+    "react-canvas-draw": "^1.1.1",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.0.0",
     "styled-components": "^5.1.0"
