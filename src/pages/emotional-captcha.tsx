@@ -5,86 +5,75 @@ import { PageProps, Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+import { shuffle } from "../utils"
+
 import "./emotional-captcha.css"
 
 import flowers from "../images/flowers.jpg"
 import pizza from "../images/pizza.jpg"
 import iceCream from "../images/ice-cream.jpg"
 import dishes from "../images/dishes.jpg"
-import socks from "../images/socks.jpg"
+import vape from "../images/vape.jpg"
 import kitten from "../images/kitten.jpg"
 import lowBat from "../images/low-bat.jpg"
 import hugging from "../images/hugging.jpg"
 import tp from "../images/tp.jpg"
 
-/**
- * Shuffles array in place.
- * @param {Array} a items An array containing the items.
- */
-function shuffle(a) {
-  var j, x, i
-  for (i = a.length - 1; i > 0; i--) {
-    j = Math.floor(Math.random() * (i + 1))
-    x = a[i]
-    a[i] = a[j]
-    a[j] = x
-  }
-  return a
-}
+const ITEMS = [
+  {
+    image: pizza,
+    isAnnoying: false,
+    isActive: false,
+  },
+  {
+    image: flowers,
+    isAnnoying: false,
+    isActive: false,
+  },
+  {
+    image: iceCream,
+    isAnnoying: true,
+    isActive: false,
+  },
+  {
+    image: dishes,
+    isAnnoying: true,
+    isActive: false,
+  },
+  {
+    image: vape,
+    isAnnoying: true,
+    isActive: false,
+  },
+  {
+    image: kitten,
+    isAnnoying: false,
+    isActive: false,
+  },
+  {
+    image: lowBat,
+    isAnnoying: true,
+    isActive: false,
+  },
+  {
+    image: hugging,
+    isAnnoying: false,
+    isActive: false,
+  },
+  {
+    image: tp,
+    isAnnoying: true,
+    isActive: false,
+  },
+]
 
 class EmotionalCaptcha extends React.Component {
   constructor(props) {
     super(props)
+    shuffle(ITEMS)
     this.state = {
-      items: [
-        {
-          image: pizza,
-          isAnnoying: false,
-          isActive: false,
-        },
-        {
-          image: flowers,
-          isAnnoying: false,
-          isActive: false,
-        },
-        {
-          image: iceCream,
-          isAnnoying: true,
-          isActive: false,
-        },
-        {
-          image: dishes,
-          isAnnoying: true,
-          isActive: false,
-        },
-        {
-          image: socks,
-          isAnnoying: false,
-          isActive: false,
-        },
-        {
-          image: kitten,
-          isAnnoying: false,
-          isActive: false,
-        },
-        {
-          image: lowBat,
-          isAnnoying: true,
-          isActive: false,
-        },
-        {
-          image: hugging,
-          isAnnoying: false,
-          isActive: false,
-        },
-        {
-          image: tp,
-          isAnnoying: true,
-          isActive: false,
-        },
-      ],
+      items: ITEMS,
     }
-    shuffle(this.state.items)
   }
 
   handleClick = e => {
@@ -115,18 +104,19 @@ class EmotionalCaptcha extends React.Component {
         <SEO title="Emotional Captcha" />
         <h1>Emotional Captcha</h1>
         <div>To enter the experience we need to check your humanity.</div>
-        <div class="container">
-          <div class="captcha-container">
-            <div class="header">
+        <div className="container">
+          <div className="captcha-container">
+            <div className="header">
               <p>
                 Select all squares that <strong>annoy you</strong>.
               </p>
               <input type="hidden" value="selfiesticks" name="category" />
             </div>
 
-            <div class="content">
+            <div className="content">
               {this.state.items.map((item, i) => (
                 <div
+                  key={i}
                   className={
                     item.isActive ? "captcha-image active" : "captcha-image"
                   }
@@ -141,8 +131,8 @@ class EmotionalCaptcha extends React.Component {
             </div>
           </div>
 
-          <div class="footer">
-            <a onClick={this.checkImages} href="#" class="button">
+          <div className="footer">
+            <a onClick={this.checkImages} href="#" className="button">
               Verify
             </a>
           </div>

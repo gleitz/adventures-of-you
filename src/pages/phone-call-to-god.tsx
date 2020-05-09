@@ -4,23 +4,23 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import FlatText from "../components/flattext"
 
-import Gif from "../images/great-hu.gif"
-import Still from "../images/secret-paths.jpg"
-
 const IndexPage = () => (
   <Layout>
     <SEO title="Phone Call to God" />
     <div>
+      Your emotions have been submitted.
+      <br />
+      <br />
       You have selected: <b>SHAME</b>.
     </div>
     <br />
-    <div>
-      Please call the Great Hu's Shame hotline. Operators are standing by.
-    </div>
+    <div>For further processing, call the Department of Shame.</div>
     <br />
     <div>
-      <FlatText text="617-900-5450" fontSize="40px"/>
+      <FlatText text="617-900-5450" fontSize="50px" />
     </div>
+    <br />
+    <div>Operators are standing by. Please have your shame handy.</div>
   </Layout>
 )
 

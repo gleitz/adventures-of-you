@@ -1,36 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-const getRandomInt = (min, max) => {
-  min = Math.ceil(min)
-  max = Math.floor(max)
-  const value = Math.floor(Math.random() * (max - min + 1)) + min
-  if (value === 0) {
-    // if 0, try again for for variation
-    return getRandomInt(min, max)
-  }
-  return value
-}
-
-const shuffle = array => {
-  var currentIndex = array.length,
-    temporaryValue,
-    randomIndex
-
-  // While there remain elements to shuffle...
-  while (0 !== currentIndex) {
-    // Pick a remaining element...
-    randomIndex = Math.floor(Math.random() * currentIndex)
-    currentIndex -= 1
-
-    // And swap it with the current element.
-    temporaryValue = array[currentIndex]
-    array[currentIndex] = array[randomIndex]
-    array[randomIndex] = temporaryValue
-  }
-
-  return array
-}
+import { shuffle, getRandomInt } from '../utils'
 
 const FlatTextHolder = styled.div`
   position: relative;
@@ -67,6 +38,7 @@ const generateFlatTextWithColor = (
       top={getRandomInt(-1 * width, width)}
       left={getRandomInt(-1 * width, width)}
       overflowWrap={overflowWrap}
+      key={color}
     >
       {text}
     </FlatTextWithColor>
