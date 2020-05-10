@@ -10,6 +10,7 @@ import Still from "../images/secret-paths.jpg"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
+    <h1>Experience Will Start at 9PM PST</h1>
     <div style={{ "textAlign": "right" }}>
       “Though we scorn the thought that fickle Fate
       <br />
