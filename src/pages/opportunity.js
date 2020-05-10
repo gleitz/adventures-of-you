@@ -16,7 +16,7 @@ class IndexPage extends Component {
         super(props);
         this.canvas = React.createRef();
     }
-    
+
     clear = () => {
         console.log(this.canvas);
         this.canvas.current.clear();
@@ -30,19 +30,17 @@ class IndexPage extends Component {
         return(
         <Layout>
             <SEO title="Vacation" />
+          <h1>Mr. Envy's Jealousy Agency</h1>
             <div>
-                <b>HI!</b> Excuse me, we need a hand planning an <b> exclusive
-                getaway</b> for a <b>high-profile client</b>. For your
-                trouble we'll try to book you an <b> extra spot</b>.
-                It'll take just a minute, and it'll be <b> worth your
-                while</b>.
+                <b>Human!</b> You have been chosen to apply for a once-in-a-lifetime, exclusive international gathering of the world's most <b> celebrated
+                minds</b>. It will take just a minute but it will <b>last a lifetime</b>.
             </div>
             <div>
                 <br/>
-                First, help me collect a bit about your qualifications:
+                First, help us collect a bit about your qualifications:
             </div>
             <div className="question">
-                <label for="education">Education </label>
+                <label for="education"><b>Education</b></label>
                 <label><em>Please select highest level attained</em></label>
               <select name="education">
                 <option value="" disabled="" selected="" hidden="">
@@ -54,7 +52,7 @@ class IndexPage extends Component {
               </select>
             </div>
             <div className="question">
-                <label>2019 (Reported) Annual Salary</label>
+                <label><b>2019 (Reported) Annual Salary</b></label>
                 <label><em>Just a general bracket, please</em></label>
               <select name="salary">
                 <option value="" disabled="" selected="" hidden="">
@@ -68,9 +66,9 @@ class IndexPage extends Component {
             </div>
 
             <div className="question">
-                Please mark your evening availability <br/>
+                <b>Please mark your availability</b><br/>
                 <em>must be able to conference call</em>
-            <CanvasDraw 
+            <CanvasDraw
                 imgSrc="https://i2.wp.com/cdn.shopify.com/s/files/1/1195/4692/files/2020_eCommerce__calendar-page-006.jpg?resize=1754%2C1240&ssl=1&utm_source=huratips.com&utm_medium=huratips.com&utm_campaign=article"
                 canvasHeight="600px"
                 canvasWidth="900px"
