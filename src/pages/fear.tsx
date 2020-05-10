@@ -50,7 +50,7 @@ class FearPage extends Component {
           </div>
           <br/>
           <div>
-            Below is the number of a stranger. In a few short words, text them one of your fears. Reveal your fear in a respectful and honest way. Remember, it is only the fears we can not speak of that hold us back.
+            STEP 1: Below is the number of a stranger. In a few short words, text them one of your fears. Reveal your fear in a respectful and honest way. Remember, it is only the fears we can not speak of that hold us back.
           </div>
           <br/>
           <div>
@@ -58,7 +58,7 @@ class FearPage extends Component {
           </div>
           <br/>
           <div>
-            Then, screenshot your message to them and submit to <a style={{color: '#FFF'}}href="mailto:someone@yoursite.com">fear@adventuresofyou.online</a>. Be brave. Be kind. Be true.
+            STEP 2: Next, screenshot your message to them and submit to <a style={{color: '#FFF'}}href="mailto:someone@yoursite.com">fear@adventuresofyou.online</a>. Be brave. Be kind. Be true.
           </div>
           <br/>
         </div>
