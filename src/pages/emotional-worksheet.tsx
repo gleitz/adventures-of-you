@@ -177,7 +177,7 @@ ${questionEmotion}
     doc.save("THE-GREAT-HU-EMOTIONAL-TRAINING-3020.pdf")
 
     saveEmotion(emotion).then(data => {
-      window.location = "/phone-call-to-god"
+      window.location = "/human-resources"
     })
   }
 

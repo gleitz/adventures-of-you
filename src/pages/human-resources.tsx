@@ -6,7 +6,7 @@ import FlatText from "../components/flattext"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Phone Call to God" />
+    <SEO title="Human Resources" />
     <div>
       Your emotions have been submitted.
       <br />

@@ -47,13 +47,13 @@ const saveEmotion = emotion => {
   })
 }
 
-const generateFlatSpot = (text, gifSrc, stillSrc) => {
+const generateFlatSpot = (text, gifSrc, stillSrc, width = "650px") => {
   return (
     <div
       style={{ marginBottom: "30px", paddingLeft: "10%", position: "relative" }}
     >
-      <Spot src={stillSrc} className="static" width="650px" />
-      <Spot src={gifSrc} width="650px" />
+      <Spot src={stillSrc} className="static" width={width} />
+      <Spot src={gifSrc} width={width} />
       <FlatTextCentered>
         <FlatText
           textStyle={{
@@ -101,4 +101,4 @@ const shuffle = array => {
   return array
 }
 
-export { generateFlatSpot, getRandomInt, shuffle, saveEmotion }
+export { generateFlatSpot, getRandomInt, shuffle, saveEmotion, getEmotions }
