@@ -21,7 +21,7 @@ class YouAreLovePage extends React.Component {
     getEmotions().then(data => {
       this.setState(state => {
         shuffle(data.emotions)
-        state.emotions = data.emotions.slice(0, 6)
+        state.emotions = data.emotions
         return state
       })
     })
@@ -49,7 +49,7 @@ class YouAreLovePage extends React.Component {
         <br />
           <div style={{color: '#ff0000'}}>
           {this.state.emotions &&
-            this.state.emotions.map((emotion, i) => {
+            this.state.emotions.slice(0, 6).map((emotion, i) => {
               if (!emotion) {
                 return
               }
