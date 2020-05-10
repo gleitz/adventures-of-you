@@ -7,9 +7,9 @@ import { generateFlatSpot, saveEmotion } from "../utils"
 import Gif from "../images/great-hu.gif"
 import Still from "../images/secret-paths.jpg"
 
-import "./twenty-questions.css"
+import "./emotional-worksheet.css"
 
-class TwentyQuestionsPage extends React.Component {
+class EmotionalWorksheetPage extends React.Component {
   constructor(props) {
     super(props)
   }
@@ -184,7 +184,7 @@ ${questionEmotion}
   render() {
     return (
       <Layout>
-        <SEO title="Twenty Questions" />
+        <SEO title="Emotional Worksheet" />
         <h1>Emotional Worksheet</h1>
         <div>
           You have proven your humanity.
@@ -602,4 +602,4 @@ ${questionEmotion}
   }
 }
 
-export default TwentyQuestionsPage
+export default EmotionalWorksheetPage

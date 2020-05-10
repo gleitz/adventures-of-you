@@ -94,7 +94,7 @@ class EmotionalCaptcha extends React.Component {
       }
     })
     if (valid) {
-      window.location = "/twenty-questions"
+      window.location = "/emotional-worksheet"
     }
   }
 
