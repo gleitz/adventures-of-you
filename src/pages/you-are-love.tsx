@@ -66,6 +66,13 @@ class YouAreLovePage extends React.Component {
           You’ve ended up at the most powerful of all emotions: love.
         </div>
           <br/>
+        <div>And just because we love you &mdash; here’s a little song for you:</div>
+        <audio controls autoPlay style={{width: '100%'}}>
+          <source src={AdventuresOfYouMp3} type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+        <br/>
+        <br />
 <h2>Here are
           some things folks like you love:</h2>
           <div style={{background: '#ccc', padding: 30}}>
@@ -97,13 +104,6 @@ class YouAreLovePage extends React.Component {
           Through the ups and downs, you've preserved. It took patience,
           courage, gratitude, honesty, candor and courage.
         </div>
-        <br />
-        <div>And just because we love you &mdash; here’s a little song for you:</div>
-        <audio controls autoPlay>
-          <source src={AdventuresOfYouMp3} type="audio/mpeg" />
-          Your browser does not support the audio element.
-        </audio>
-        <br/>
         <br />
         <div>Thanks for playing, and remember &mdash; it all ends with Love. </div>
         <br />
