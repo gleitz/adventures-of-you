@@ -21,9 +21,9 @@ class FearPage extends Component {
   }
 
   fetchEmotions() {
-    getEmotions().then(bin => {
+    getEmotions().then(data => {
       this.setState(state => {
-        state.phoneNumbers = bin.data.phone_numbers
+        state.phoneNumbers = data.phone_numbers
         shuffle(state.phoneNumbers)
         return state
       })

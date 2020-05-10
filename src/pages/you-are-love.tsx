@@ -18,9 +18,9 @@ class YouAreLovePage extends React.Component {
   }
 
   fetchEmotions() {
-    getEmotions().then(bin => {
+    getEmotions().then(data => {
       this.setState(state => {
-        state.emotions = bin.data.emotions
+        state.emotions = data.emotions
         return state
       })
     })
