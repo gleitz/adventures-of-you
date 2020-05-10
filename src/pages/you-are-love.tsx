@@ -47,7 +47,7 @@ class YouAreLovePage extends React.Component {
           of the emotions folks have been feeling this week:
         </div>
         <br />
-          <div style={{color: '#ff0000'}}>
+          <div style={{background: '#ccc', padding: 30}}>
           {this.state.emotions &&
             this.state.emotions.slice(0, 6).map((emotion, i) => {
               if (!emotion) {
@@ -63,11 +63,12 @@ class YouAreLovePage extends React.Component {
         </div>
         <br />
         <div>
-          You’ve ended up at the most powerful of all emotions: love. Here are
-          some things folks like you love:
+          You’ve ended up at the most powerful of all emotions: love.
         </div>
           <br/>
-          <div style={{color: '#ff0000'}}>
+<h2>Here are
+          some things folks like you love:</h2>
+          <div style={{background: '#ccc', padding: 30}}>
           {this.state.emotions &&
             this.state.emotions.map((emotion, i) => {
               if (!emotion.questionLove) {
@@ -77,11 +78,12 @@ class YouAreLovePage extends React.Component {
             })}
           </div>
         <br />
+          <hr/>
         <div>
-          And here's what folks are laughing about.
+          <h2>And here's what folks are laughing about.</h2>
         </div>
           <br/>
-          <div style={{color: '#ff0000'}}>
+          <div style={{background: '#ccc', padding: 30}}>
           {this.state.emotions &&
             this.state.emotions.map((emotion, i) => {
               if (!emotion.questionLaugh) {
