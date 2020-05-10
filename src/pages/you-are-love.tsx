@@ -48,8 +48,8 @@ class YouAreLovePage extends React.Component {
         </div>
         <br />
         <div>
-          {this.state.emptions &&
-            this.state.emptions.map((emotion, i) => {
+          {this.state.emotions &&
+            this.state.emotions.map((emotion, i) => {
               if (!emotion) {
                 return
               }
