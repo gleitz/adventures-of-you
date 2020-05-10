@@ -42,7 +42,7 @@ const IndexPage = () => (
       choose, but choose wisely.
     </div>
     <br />
-    <a href="/emotional-captcha">{generateFlatSpot("ENTER", Gif, Still)}</a>
+    <a href="/#">{generateFlatSpot("ENTER", Gif, Still)}</a>
   </Layout>
 )
 

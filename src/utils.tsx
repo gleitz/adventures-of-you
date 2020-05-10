@@ -52,7 +52,9 @@ const saveVenmo = venmoUsername => {
     jsonApi = new JsonBinIoApi(JSBIN_API_KEY)
   }
   return getEmotions().then(bin => {
-    bin.data.venmo_usernames.push(venmoUsername)
+    if (bin.data.venmo_usernames.indexOf(venmoUsername) === -1) {
+      bin.data.venmo_usernames.push(venmoUsername)
+    }
     return jsonApi
       .updateBin({
         id: JSBIN_BIN_ID,
