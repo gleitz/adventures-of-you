@@ -9,7 +9,7 @@ import Still from "../images/love-compy.gif"
 
 import AdventuresOfYouMp3 from "../audio/adventures-of-you.mp3"
 
-import { generateFlatSpot, getEmotions } from "../utils"
+import { generateFlatSpot, getEmotions, shuffle } from "../utils"
 
 class YouAreLovePage extends React.Component {
   constructor(props) {
@@ -20,7 +20,8 @@ class YouAreLovePage extends React.Component {
   fetchEmotions() {
     getEmotions().then(data => {
       this.setState(state => {
-        state.emotions = data.emotions
+        shuffle(data.emotions)
+        state.emotions = data.emotions.slice(0, 6)
         return state
       })
     })
@@ -72,7 +73,21 @@ class YouAreLovePage extends React.Component {
               if (!emotion.questionLove) {
                 return
               }
-              return <div key={i}>{emotion.questionLove}</div>
+              return <div key={i}>{emotion.questionLove}<br/><br/></div>
+            })}
+          </div>
+        <br />
+        <div>
+          And here's what folks are laughing about.
+        </div>
+          <br/>
+          <div style={{color: '#ff0000'}}>
+          {this.state.emotions &&
+            this.state.emotions.map((emotion, i) => {
+              if (!emotion.questionLaugh) {
+                return
+              }
+              return <div key={i}>{emotion.questionLaugh}<br/><br/></div>
             })}
           </div>
         <br />
@@ -81,17 +96,18 @@ class YouAreLovePage extends React.Component {
           courage, gratitude, honesty, candor and courage.
         </div>
         <br />
-        <div>And just because we love you--here’s a little song for you:</div>
+        <div>And just because we love you &mdash; here’s a little song for you:</div>
         <audio controls autoPlay>
           <source src={AdventuresOfYouMp3} type="audio/mpeg" />
           Your browser does not support the audio element.
         </audio>
+        <br/>
         <br />
-        <div>Thanks for playing, and remember--it all ends with Love. </div>
+        <div>Thanks for playing, and remember &mdash; it all ends with Love. </div>
         <br />
         <div>
-          (ps if you have thoughts, comments, concerns about the game-- drop us
-          a line! hello@theadevnturesofyou.online)
+          (ps if you have thoughts, comments, concerns about the game &mdash; drop us
+          a line! <a href="mailto:hello@adventuresofyou.online">hello@adventuresofyou.online</a>)
         </div>
         <br />
       </Layout>
