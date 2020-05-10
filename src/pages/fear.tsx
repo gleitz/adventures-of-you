@@ -58,7 +58,7 @@ class FearPage extends Component {
           </div>
           <br/>
           <div>
-            STEP 2: Next, screenshot your message to them and submit to <a style={{color: '#FFF'}}href="mailto:someone@yoursite.com">fear@adventuresofyou.online</a>. Be brave. Be kind. Be true.
+            STEP 2: Next, screenshot your message to them and submit to <a style={{color: '#FFF'}}href="mailto:someone@yoursite.com">fear@adventuresofyou.online</a>. We will respond with the final step! Be brave. Be kind. Be true.
           </div>
           <br/>
         </div>

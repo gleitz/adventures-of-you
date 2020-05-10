@@ -10,7 +10,6 @@ import Still from "../images/secret-paths.jpg"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Experience Will Start at 9PM PST</h1>
     <div style={{ "textAlign": "right" }}>
       “Though we scorn the thought that fickle Fate
       <br />
@@ -43,7 +42,7 @@ const IndexPage = () => (
       choose, but choose wisely.
     </div>
     <br />
-    <a href="/#">{generateFlatSpot("ENTER", Gif, Still)}</a>
+    <a href="/emotional-captcha">{generateFlatSpot("ENTER", Gif, Still)}</a>
   </Layout>
 )
 
