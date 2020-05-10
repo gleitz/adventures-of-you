@@ -7,6 +7,7 @@ import SEO from "../components/seo"
 
 import Gif from "../images/great-hu.gif"
 import Still from "../images/secret-paths.jpg"
+import Calendar from "../images/calendar.png"
 
 import "./opportunity.css"
 
@@ -68,8 +69,8 @@ class IndexPage extends Component {
             <div className="question">
                 <b>Please mark your availability</b><br/>
                 <em>must be able to conference call</em>
-            <CanvasDraw
-                imgSrc="https://i2.wp.com/cdn.shopify.com/s/files/1/1195/4692/files/2020_eCommerce__calendar-page-006.jpg?resize=1754%2C1240&ssl=1&utm_source=huratips.com&utm_medium=huratips.com&utm_campaign=article"
+            <CanvasDraw 
+                imgSrc={Calendar}
                 canvasHeight="600px"
                 canvasWidth="900px"
                 lazyRadius="0"
