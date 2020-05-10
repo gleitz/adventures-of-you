@@ -23,7 +23,6 @@ class YouAreLovePage extends React.Component {
         state.emotions = bin.data.emotions
         return state
       })
-      this.forceUpdate()
     })
   }
 
