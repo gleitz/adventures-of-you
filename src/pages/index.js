@@ -42,7 +42,12 @@ const IndexPage = () => (
       choose, but choose wisely.
     </div>
     <br />
-    <a href="/emotional-captcha">{generateFlatSpot("ENTER", Gif, Still)}</a>
+    <div>
+      (if you have thoughts, comments, concerns about the game &mdash; drop us
+      a line! <a href="mailto:hello@adventuresofyou.online">hello@adventuresofyou.online</a>)
+    </div>
+    <br />
+    <a href="#">{generateFlatSpot("GAME CLOSED", Gif, Still)}</a>
   </Layout>
 )
 
