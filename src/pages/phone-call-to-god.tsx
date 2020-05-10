@@ -17,7 +17,7 @@ const IndexPage = () => (
     <div>For further processing, call the Department of Shame.</div>
     <br />
     <div>
-      <FlatText text="(669) 281-0057" fontSize="50px" />
+      <FlatText text="669-281-0057" fontSize="50px" />
     </div>
     <br />
     <div>Operators are standing by. Please have your shame handy.</div>
