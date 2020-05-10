@@ -47,7 +47,7 @@ class YouAreLovePage extends React.Component {
           of the emotions folks have been feeling this week:
         </div>
         <br />
-        <div>
+          <div style={{color: '#ff0000'}}>
           {this.state.emotions &&
             this.state.emotions.map((emotion, i) => {
               if (!emotion) {
@@ -66,6 +66,16 @@ class YouAreLovePage extends React.Component {
           You’ve ended up at the most powerful of all emotions: love. Here are
           some things folks like you love:
         </div>
+          <br/>
+          <div style={{color: '#ff0000'}}>
+          {this.state.emotions &&
+            this.state.emotions.map((emotion, i) => {
+              if (!emotion.questionLove) {
+                return
+              }
+              return <div key={i}>{emotion.questionLove}</div>
+            })}
+          </div>
         <br />
         <div>
           Through the ups and downs, you've preserved. It took patience,
