@@ -34,7 +34,7 @@ class IndexPage extends Component {
           <h1>Mr. Envy's Jealousy Agency</h1>
             <div>
                 <b>Human!</b> You have been chosen to apply for a once-in-a-lifetime, exclusive international gathering of the world's most <b> celebrated
-                minds</b>. It will take just a minute but it will <b>last a lifetime</b>.
+                minds</b>. Applying will take just a minute but acceptance will <b>last a lifetime</b>.
             </div>
             <div>
                 <br/>
@@ -69,7 +69,7 @@ class IndexPage extends Component {
             <div className="question">
                 <b>Please mark your availability</b><br/>
                 <em>must be able to conference call</em>
-            <CanvasDraw 
+            <CanvasDraw
                 imgSrc={Calendar}
                 canvasHeight="600px"
                 canvasWidth="900px"

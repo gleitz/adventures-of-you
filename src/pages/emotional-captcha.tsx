@@ -72,6 +72,7 @@ class EmotionalCaptcha extends React.Component {
     super(props)
     shuffle(ITEMS)
     this.state = {
+      isClient: false,
       items: ITEMS,
     }
   }
@@ -98,9 +99,13 @@ class EmotionalCaptcha extends React.Component {
     }
   }
 
+  componentDidMount() {
+    this.setState({ isClient: true })
+  }
+
   render() {
     return (
-      <Layout>
+      <Layout key={this.state.isClient}>
         <SEO title="Emotional Captcha" />
         <h1>Emotional Captcha</h1>
         <div>To enter the experience we need to check your humanity.</div>
