@@ -30,7 +30,7 @@ const IndexPage = () => (
     </div>
     <br />
     <div>
-      Hu, the humanoid representative of all AI and leader on Earth, has
+      The Great Hu, humanoid representative of all AI and leader on Earth, has
       re-appeared, but must gather complete understanding of the core human
       emotions of Love, Courage, Joy, Gratitude, Jealousy, Fear, Shame, and
       Pride.
@@ -42,10 +42,12 @@ const IndexPage = () => (
       choose, but choose wisely.
     </div>
     <br />
-    <div>
-      (if you have thoughts, comments, concerns about the game &mdash; drop us
-      a line! <a href="mailto:hello@adventuresofyou.online">hello@adventuresofyou.online</a>)
-    </div>
+    {/*
+       <div>
+       (if you have thoughts, comments, or questions about the game &mdash; drop us
+       a line! <a href="mailto:hello@adventuresofyou.online">hello@adventuresofyou.online</a>)
+       </div>
+     */}
     <br />
     <a href="#">{generateFlatSpot("GAME CLOSED", Gif, Still)}</a>
   </Layout>
