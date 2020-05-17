@@ -10,7 +10,7 @@ import SmileFace from "../images/smile-face.jpg"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Pup's Pod Party" />
     <div style={{ "textAlign": "right" }}>
       “There was a star danced,
       <br />
