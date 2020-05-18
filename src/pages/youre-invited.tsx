@@ -31,7 +31,7 @@ const IndexPage = () => (
       <div>
       </div>
     </div>
-    <a href="#">{generateFlatSpot("", DogDance, SmileFace)}</a>
+    <a href="/">{generateFlatSpot("", DogDance, SmileFace)}</a>
   </Layout>
 )
 
