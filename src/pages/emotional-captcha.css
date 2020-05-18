@@ -1,12 +1,10 @@
 .captcha-image {
-    width: 200px;
+    width: 100%;
 }
 
 .container {
-    height: 524.7px; margin-top: 29.15px; width: 640px;
+  width: 70%;
 }
-
-.content { width: 620px }
 
 .loading {
     display: none;
@@ -40,7 +38,7 @@
 
 .container {
     height: auto;
-    margin: 5vh auto;
+    margin: 2rem  auto;
     -webkit-box-shadow: 5px 5px 3px 0px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 5px 5px 3px 0px rgba(0, 0, 0, 0.15);
     box-shadow: 5px 5px 3px 0px rgba(0, 0, 0, 0.15)
@@ -48,8 +46,7 @@
 
 @media (max-width: 767px) {
     .container {
-        height: 70vh;
-        margin: 15vh auto
+      width: 100%;
     }
 }
 
@@ -67,7 +64,7 @@
     padding-left: 5%;
     margin-left: 2px;
     margin-right: 2px;
-    margin-bottom: 14px;
+    margin-bottom: 11.5px;
     overflow: hidden;
     height: calc(20% - 14px)
 }
@@ -100,19 +97,18 @@
 }
 
 .captcha-image {
-    height: calc(33% - 2px);
-    margin: 2px;
-    border: 6px solid #FFF;
+    width: calc(33% - 3px);
+    margin: 1px;
+    border: 3px solid #FFF;
 }
 
 .captcha-image.active {
-    border: 6px solid #ff0000
+    border: 3px solid #ff0000
 }
 
 .captcha-image img {
     display: block;
     margin: auto;
-    max-width: 188px;
 }
 
 .footer {
@@ -161,7 +157,6 @@
 
 @media (max-width: 767px) {
     .footer .button {
-        width: 155px;
         padding: 10px 0
     }
 }

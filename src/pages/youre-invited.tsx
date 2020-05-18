@@ -11,7 +11,7 @@ import SmileFace from "../images/smile-face.jpg"
 const IndexPage = () => (
   <Layout>
     <SEO title="Pup's Pod Party" />
-    <div style={{ "textAlign": "right" }}>
+    <div style={{ "textAlign": "right", marginBottom: '1rem' }}>
       “There was a star danced,
       <br />
       and under that was I born.”
@@ -31,7 +31,7 @@ const IndexPage = () => (
       <div>
       </div>
     </div>
-    <a href="/">{generateFlatSpot("", DogDance, SmileFace)}</a>
+    <a href="/">{generateFlatSpot("saturday...", DogDance, SmileFace, "75%")}</a>
   </Layout>
 )
 

@@ -596,7 +596,7 @@ ${questionEmotion}
           </select>
         </div>
 
-        <a onClick={this.checkForm}>{generateFlatSpot("SUBMIT", Gif, Still)}</a>
+        <a onClick={this.checkForm}>{generateFlatSpot("SUBMIT", Gif, Still, "75%")}</a>
       </Layout>
     )
   }

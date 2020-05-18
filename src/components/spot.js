@@ -5,8 +5,7 @@ import "./style.css"
 const Spot = styled.img`
   border-radius: 50%;
   border: 3px solid black;
-  width: ${props => (props.width || "500") + 'px'};
-  height: ${props => (props.height || "500") + 'px'};
+  width: ${props => (props.width || "100%")};
   object-fit: cover;
   max-width: inherit;
 `

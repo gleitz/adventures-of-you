@@ -32,7 +32,7 @@ const Layout = ({ children }) => {
         <div className="page-content">
           <main>{children}</main>
         </div>
-        <footer>{PAGE_TYPE === 'birthday' ? `© ${new Date().getFullYear()}, Pup's Pool Party Productions`: `© ${new Date().getFullYear() + 1000}, The Great Hu`}</footer>
+        <footer>{PAGE_TYPE === 'birthday' ? `© ${new Date().getFullYear()}, P³ Productions`: `© ${new Date().getFullYear() + 1000}, The Great Hu`}</footer>
       </div>
     </>
   )

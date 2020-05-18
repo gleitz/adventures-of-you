@@ -38,7 +38,7 @@ class YouAreLovePage extends React.Component {
         <h1>You made it!</h1>
         <div>Congratulations &mdash; you've won!</div>
         <br />
-        <div style={{ float: "left", marginRight: "60px" }}>
+        <div style={{ float: "left", marginRight: "2rem" }}>
           {generateFlatSpot("", Gif, Still, "350px")}
         </div>
         <br />

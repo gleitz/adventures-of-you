@@ -64,13 +64,13 @@ const saveVenmo = venmoUsername => {
   })
 }
 
-const generateFlatSpot = (text, gifSrc, stillSrc, width = "650px") => {
+const generateFlatSpot = (text, gifSrc, stillSrc, width = "100%") => {
   return (
     <div
-      style={{ marginBottom: "30px", paddingLeft: "10%", position: "relative" }}
+      style={{ margin: "0 auto 2rem auto", position: "relative", width }}
     >
-      <Spot src={stillSrc} className="static" width={width} />
-      <Spot src={gifSrc} width={width} />
+      <Spot src={stillSrc} className="static" />
+      <Spot src={gifSrc} />
       <FlatTextCentered>
         <FlatText
           textStyle={{
@@ -79,7 +79,7 @@ const generateFlatSpot = (text, gifSrc, stillSrc, width = "650px") => {
           }}
           text={text}
           overflowWrap="normal"
-          fontSize="5rem"
+          fontSize="3rem"
           width="4"
         />
       </FlatTextCentered>
