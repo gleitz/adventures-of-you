@@ -60,7 +60,7 @@ const IndexPage = () => (
         Through the powers of technology, we've recreated 2020's hottest (and only) club: <b>Shelter Island</b>.
       </div>
       <div>
-        A secret speakeasy hidden from plain sight, but you've got to complete a couple challenges to get in.
+        A secret speakeasy, out in the open, but hidden from plain sight. Want in? You've got to complete a couple challenges...
       </div>
       <div>
         We repeat: this is NOT HAPPENING.
