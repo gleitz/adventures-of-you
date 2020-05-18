@@ -79,7 +79,7 @@ const generateFlatSpot = (text, gifSrc, stillSrc, width = "100%") => {
           }}
           text={text}
           overflowWrap="normal"
-          fontSize="3rem"
+          fontSize="3.5vw"
           width="4"
         />
       </FlatTextCentered>
