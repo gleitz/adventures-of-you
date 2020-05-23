@@ -62,12 +62,9 @@ const IndexPage = () => (
       <div>
         A secret speakeasy, out in the open, but hidden from plain sight. Want in? You've got to complete a couple challenges...
       </div>
-      <div>
-        Doors open today at noon...
-      </div>
     </div>
 
-    <a href="#">{generateFlatSpot("SEE YOU SOON", Gif, Still, "75%")}</a>
+    <a href="/boogie-captcha">{generateFlatSpot("ENTER", Gif, Still, "75%")}</a>
   </Layout>
 )
 

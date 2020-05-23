@@ -38,18 +38,20 @@ class YouAreLovePage extends React.Component {
         <h1>You made it!</h1>
         <div>The secret coordinates are <a target="_blank" href="https://goo.gl/maps/53CtAAL9HQkqpWJf8">37°46'17.1"N 122°17'35.1"W</a>.</div>
         <br />
+        <div>The party starts at 2PM PST and goes till sunset.</div>
+        <br />
         <div style={{ float: "left", marginRight: "2rem" }}>
           {generateFlatSpot("", Gif, Still, "75%")}
         </div>
         <div>
-          A few final notes:
+          A few notes:
         </div>
         <br />
           <div style={{background: '#eee', padding: 30}}>
             <ul>
               <li>When you're about a mile away, tune into 87.9, Shelter Island Radio.</li>
-              <li>If you have an Android phone, install <a href="https://play.google.com/store/apps/details?id=com.nextradioapp.nextradio&hl=en_US">NextRadio</a> and bring wired headphones.</li>
-              <li>If you have a radio boombox, bring it! If not you can dance by your car.</li>
+              <li>If you have an Android phone, install <a target="_blank" href="https://play.google.com/store/apps/details?id=com.nextradioapp.nextradio&hl=en_US">NextRadio</a> and bring wired headphones.</li>
+              <li>If you have a radio boombox, bring it! If not you can bump tunes from your car.</li>
             </ul>
             {/*
           {this.state.emotions &&

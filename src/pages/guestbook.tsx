@@ -233,7 +233,7 @@ ${questionMemory}
         </div>
 
         <div className="question">
-          <label htmlFor="animal">What is your spirit animal?</label>
+          <label htmlFor="animal">Choose your patronus:</label>
           <select name="animal">
             <option value="" disabled="" selected="" hidden="">
               ...
