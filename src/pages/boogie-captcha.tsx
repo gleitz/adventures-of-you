@@ -15,7 +15,7 @@ import zoomMeeting from "../images/zoom-meeting.jpg"
 import homeAlone from "../images/home-alone.jpg"
 import netflix from "../images/netflix.jpg"
 import hugging from "../images/hugging.jpg"
-import ladyAndTramp from "../images/lady-and-tramp.jpg"
+import coupleKissing from "../images/couple-kissing.jpg"
 
 const ITEMS = [
   {
@@ -59,7 +59,7 @@ const ITEMS = [
     isActive: false,
   },
   {
-    image: ladyAndTramp,
+    image: coupleKissing,
     isWanted: true,
     isActive: false,
   },

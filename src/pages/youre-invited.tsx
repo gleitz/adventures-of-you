@@ -23,7 +23,7 @@ const IndexPage = () => (
       You're invited to <b>Pup's Pod Party: Shelter Island</b>, the Bay Area's most sparse dance party.
                         </div>
       <div>
-        Want to find the address? then you gotta play the game!
+        Want to find the address? Then you gotta play the game!
       </div>
       <div>
         Game opens <b>today</b> at noon, with socially distant dance party from 2PM till sunset.
