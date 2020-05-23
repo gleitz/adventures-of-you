@@ -67,7 +67,7 @@ const IndexPage = () => (
       </div>
     </div>
 
-    <a href="#">{generateFlatSpot("", Gif, Still, "75%")}</a>
+    <a href="#">{generateFlatSpot("SEE YOU SOON", Gif, Still, "75%")}</a>
   </Layout>
 )
 

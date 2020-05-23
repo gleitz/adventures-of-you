@@ -17,21 +17,21 @@ const IndexPage = () => (
       and under that was I born.”
       <br />
     </div>
-    <h1>Save the Date</h1>
+    <h1>Today!</h1>
     <div className='padded'>
       <div>
       You're invited to <b>Pup's Pod Party: Shelter Island</b>, the Bay Area's most sparse dance party.
                         </div>
       <div>
-        Doors open <b>Saturday, May 23</b> at noon, with birthday festivities running through the evening.
+        Want to find the address? then you gotta play the game!
       </div>
       <div>
-        While cyberspace attendance is possible from anywhere in the known universe, there will be <i>real, in-person</i> experiences to explore. Bring your pod, but be sure to pack a mask and hand sanitizer.
+        Game opens <b>today</b> at noon, with socially distant dance party from 2PM till sunset.
       </div>
       <div>
       </div>
     </div>
-    <a href="/">{generateFlatSpot("saturday...", DogDance, SmileFace, "75%")}</a>
+    <a href="/shelter-island">{generateFlatSpot("LET'S GO", DogDance, SmileFace, "75%")}</a>
   </Layout>
 )
 
