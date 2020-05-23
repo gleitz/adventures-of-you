@@ -49,7 +49,7 @@ class YouAreLovePage extends React.Component {
             <ul>
               <li>When you're about a mile away, tune into 87.9, Shelter Island Radio.</li>
               <li>If you have an Android phone, install <a href="https://play.google.com/store/apps/details?id=com.nextradioapp.nextradio&hl=en_US">NextRadio</a> and bring wired headphones.</li>
-              <li>If you have a boombox or a portable radio, bring it!</li>
+              <li>If you have a radio boombox, bring it! If not you can dance by your car.</li>
             </ul>
             {/*
           {this.state.emotions &&

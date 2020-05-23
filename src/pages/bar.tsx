@@ -47,7 +47,7 @@ class FearPage extends Component {
             Shelter Island is BYOB, but everyone needs a little recommendation from time to time. I mean how long can you really drink rosé right from the bottle?
           </div>
           <div>
-            STEP 1: Below is the number of another Shelter Island guest. Text them one of your favorite drink recipes.
+            STEP 1: Below is the number of another Shelter Island guest. Text them one of your favorite drink recipes. Get creative! Maybe it's two Tylenol PM on the rocks.
           </div>
           <div>
             {this.state.phoneNumbers && this.state.phoneNumbers.length > 0 && this.state.phoneNumbers[0]}
