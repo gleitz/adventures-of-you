@@ -105,7 +105,6 @@ class ShelterCaptcha extends React.Component {
     return (
       <Layout key={this.state.isClient}>
         <SEO title="Boogie Captcha" />
-        <h1>Boogie Captcha</h1>
         <div>There's a lot of ticket scalping bots out there trying to snap up passes to Shelter Island.</div>
         <div className="container">
           <div className="captcha-container">

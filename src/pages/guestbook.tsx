@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { generateFlatSpot, saveEmotion } from "../utils"
 
-import Gif from "../images/great-hu.gif"
+import Gif from "../images/shelter-island.gif"
 import Still from "../images/gleitz-goggles.jpg"
 
 import "./emotional-worksheet.css"
@@ -40,20 +40,21 @@ class EmotionalWorksheetPage extends React.Component {
     const questionLaugh = document.getElementsByName("question-laugh")[0].value
     const questionMemory = document.getElementsByName("question-memory")[0]
       .value
-    const questionSelfie = document.getElementsByName("selfie")[0].value
+    // const questionSelfie = document.getElementsByName("selfie")[0].value
     if (!emotion1) {
       alert("You must select an emotion!")
       return
     }
 
     const emotion = {
+      color,
       animal,
       emotion1,
       emotion2,
       emotion3,
       questionLaugh,
       questionMemory,
-      questionSelfie,
+      // questionSelfie
     }
 
     const firstPage = `* SHELTER ISLAND GUESTBOOK *
@@ -118,7 +119,7 @@ ${questionMemory}
 
 --------------------------------------------------------------------------------------------------------
 
-* DRINKS ARE 2 FOR 1 ALL NIGHT AND DAPPER GENTLEMEN GET IN FOR FREE *
+* SHELTER ISLAND: ITS LADIES NIGHT AND DAPPER GENTLEMEN GET IN FOR FREE *
 `
 
     const pageWidth = 8.0,
@@ -161,6 +162,25 @@ ${questionMemory}
 
     doc.save("SHELTER-ISLAND-GUESTBOOK.pdf")
 
+    // const selfie = document.getElementsByName("selfie")[0].files[0]
+    // const reader = new FileReader();
+
+    // if (selfie) {
+      // reader.readAsBinaryString(selfie);
+    // } else {
+    // }
+
+    // reader.onload = function() {
+      // const selfieData = btoa(reader.result)
+      // emotion['selfie'] = selfieData
+      // saveEmotion(emotion).then(data => {
+        // window.location = "/pregame"
+      // })
+    // };
+    // reader.onerror = function() {
+      // console.log('there are some problems');
+    // };
+
     saveEmotion(emotion).then(data => {
       window.location = "/pregame"
     })
@@ -177,7 +197,7 @@ ${questionMemory}
             club.
           </div>
           <div>
-            Drinks are 2 for 1 all night and dapper gentlemen get in for free.
+            It's ladies night and dapper gentlemen get in for free.
           </div>
           <div>
             Shelter Island is celebrating some <b>special occasions</b> today!
@@ -191,7 +211,7 @@ ${questionMemory}
             🎉 Three cheers to the Webster-Guineys for explicitly prepping for
             Peak Oil but accidently prepping for Corona.
             <br />
-            🕺 To the empty-nesters Vivek and Xtina &mdash; they grow up so
+            🕺 To the empty-nesters Vivek and Xtina &mdash; your little ones grow up so
             quick.
             <br />
             🥳 Happy Birthday Pup!
@@ -591,14 +611,6 @@ ${questionMemory}
             className="worksheet-field"
             name="question-memory"
           ></textarea>
-        </div>
-
-        <div className="question">
-          <label htmlFor="selfie">
-            We can't take our group pyramid picture this year (for obvious
-            reasons), so upload your selfie here.
-          </label>{" "}
-          <input type="file" id="img" name="selfie" accept="image/*" />
         </div>
 
         <a onClick={this.checkForm}>
