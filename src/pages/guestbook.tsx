@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 import { generateFlatSpot, saveEmotion } from "../utils"
 
 import Gif from "../images/great-hu.gif"
-import Still from "../images/secret-paths.jpg"
+import Still from "../images/gleitz-goggles.jpg"
 
 import "./emotional-worksheet.css"
 
@@ -18,7 +18,7 @@ class EmotionalWorksheetPage extends React.Component {
     let today = new Date()
     let dd = today.getDate()
     let mm = today.getMonth() + 1 //January is 0!
-    const yyyy = today.getFullYear() + 1000
+    const yyyy = today.getFullYear()
 
     if (dd < 10) {
       dd = "0" + dd
@@ -37,12 +37,12 @@ class EmotionalWorksheetPage extends React.Component {
     const emotion1 = document.getElementsByName("emotion-in-2020-1")[0].value
     const emotion2 = document.getElementsByName("emotion-in-2020-2")[0].value
     const emotion3 = document.getElementsByName("emotion-in-2020-3")[0].value
-    const questionLove = document.getElementsByName("question-love")[0].value
     const questionLaugh = document.getElementsByName("question-laugh")[0].value
-    const questionNight = document.getElementsByName("question-night")[0].value
-    const questionEmotion = document.getElementsByName("emotion")[0].value
-    if (!questionEmotion) {
-      alert("You must select an emotion")
+    const questionMemory = document.getElementsByName("question-memory")[0]
+      .value
+    const questionSelfie = document.getElementsByName("selfie")[0].value
+    if (!emotion1) {
+      alert("You must select an emotion!")
       return
     }
 
@@ -51,13 +51,12 @@ class EmotionalWorksheetPage extends React.Component {
       emotion1,
       emotion2,
       emotion3,
-      questionLove,
       questionLaugh,
-      questionNight,
-      questionEmotion,
+      questionMemory,
+      questionSelfie,
     }
 
-    const firstPage = `* THE GREAT HU'S EMOTIONAL TRAINING *
+    const firstPage = `* SHELTER ISLAND GUESTBOOK *
 
 ${today}
 
@@ -69,11 +68,11 @@ ${today}
 |    ENERGY    |
 + ------------ +
 
-* * */ \\* * * * * * * * * * * * * * * * * 3  * * * * * * * * * * * *   * * * * * * 3  * * * * * * * * *
-* * /   \\* * * * * * * * * *  3  * * * * * * * * * 0   * * * * * * * * * * * *   3 * * * * * * *   *
-* */  _  \\* * * * * 3 * * * * * * * *  0 * * * * * * *    3  * * *   * * *   0 * * * * * * * *  *
+* * */ \\* * * * * * * * * * * * * * * * * 2  * * * * * * * * * * * *   * * * * * * 2  * * * * * * * * *
+* * /   \\* * * * * * * * * *  2  * * * * * * * * * 0   * * * * * * * * * * * *   2 * * * * * * *   *
+* */  _  \\* * * * * 2 * * * * * * * *  0 * * * * * * *    2  * * *   * * *   0 * * * * * * * *  *
 * /  | |  \\* * * * * *  * *  * * * *  *  ** * *  * * * * * * * *  * * * * * * *   * * *   * * * * *
-*/    –    \\* * *    0  * * * *  * * * * 3 * * * * * * * *   * * * * * *   * * * * * 0  * * * * *   *
+*/    –    \\* * *    0  * * * *  * * * * 2 * * * * * * * *   * * * * * *   * * * * * 0  * * * * *   *
  ===========   *   *        *        *   * *       *           *     * *        *  *          *     *
 * |       |    *           *    *        *      *          *             *         *       * *    *
   |       |  *         *            *                *          *              *         *         *
@@ -90,7 +89,7 @@ ${today}
 
 
 + ----------------------- +
-|     EMOTION FOR 3020    |
+|      DAILY EMOTIONS     |
 + ----------------------- +
 
 ${emotion1}
@@ -100,40 +99,26 @@ ${emotion1}
         ${emotion3}
         ...........................
 
-
-+ -------------------------------------- +
-|            WHAT DO YOU LOVE?           |
-+ -------------------------------------- +
-
-${questionLove}
-
 `
 
-    var secondPage = `+ ------------------------------ +
+    const secondPage = `+ ------------------------------ +
 |    WHAT MAKES YOU LAUGH?       |
 + ------------------------------ +
 
 ${questionLaugh}
 
 
-+ ------------------------------ +
-|  WHAT KEEPS YOU UP AT NIGHT?   |
-+ ------------------------------ +
++ ------------------------------------ +
+|    FOND MEMORY OF THE BIRTHDAY BOI   |
++ ------------------------------------ +
 
-${questionNight}
-
-
-+ ---------------------------------------------------------- +
-|               EMOTION YOU WISH TO EXPLORE...               |
-+ ---------------------------------------------------------- +
-
-${questionEmotion}
+${questionMemory}
 
 
 
 --------------------------------------------------------------------------------------------------------
 
-* THE GREAT HU THANKS YOU FOR HELPING SAVE HUMANITY *
+* DRINKS ARE 2 FOR 1 ALL NIGHT AND DAPPER GENTLEMEN GET IN FOR FREE *
 `
 
     const pageWidth = 8.0,
@@ -174,25 +159,53 @@ ${questionEmotion}
 
     doc.text(two, margin, margin + 2 * oneLineHeight)
 
-    doc.save("THE-GREAT-HU-EMOTIONAL-TRAINING-3020.pdf")
+    doc.save("SHELTER-ISLAND-GUESTBOOK.pdf")
 
     saveEmotion(emotion).then(data => {
-      window.location = "/human-resources"
+      window.location = "/pregame"
     })
   }
 
   render() {
     return (
       <Layout>
-        <SEO title="Emotional Worksheet" />
-        <h1>Emotional Worksheet</h1>
-        <div>
-          You have proven your humanity.
-          <br />
-          The Great Hu requires emotional guidance.
+        <SEO title="Guestbook" />
+        <h1>Guestbook</h1>
+        <div className="padded">
+          <div>
+            Welcome to Shelter Island &mdash; the Bay Area's hottest (and only)
+            club.
+          </div>
+          <div>
+            Drinks are 2 for 1 all night and dapper gentlemen get in for free.
+          </div>
+          <div>
+            Shelter Island is celebrating some <b>special occasions</b> today!
+          </div>
+          <div>
+            🍾 Best wishes on your 50th anniversary Dave and Savannah.
+            <br />
+            🥂 Condolences to the Class of 2020 &mdash; you never really had a
+            chance.
+            <br />
+            🎉 Three cheers to the Webster-Guineys for explicitly prepping for
+            Peak Oil but accidently prepping for Corona.
+            <br />
+            🕺 To the empty-nesters Vivek and Xtina &mdash; they grow up so
+            quick.
+            <br />
+            🥳 Happy Birthday Pup!
+            <br />
+            🎁 Congrats Dom &amp; Mike on your new arrival.
+            <br />
+          </div>
+          <div>
+            Please sign the <b>Guestbook</b> to make our patrons of honor feel
+            special.
+          </div>
         </div>
         <div className="question">
-          <label htmlFor="color">What color is your current emotion?</label>
+          <label htmlFor="color">What color is your energy?</label>
           <input
             name="color"
             className="jscolor {valueElement:null} worksheet-field"
@@ -279,7 +292,8 @@ ${questionEmotion}
 
         <div className="question">
           <label htmlFor="emotion-in-2020-1">
-            List your top 3 emotions from the past week:
+            Take us through a typical day of your emotions, from waking up
+            (left) to when you go to bed (right)
           </label>
           <select name="emotion-in-2020-1">
             <option value="" disabled="" selected="" hidden="">
@@ -560,12 +574,7 @@ ${questionEmotion}
         </div>
 
         <div className="question">
-          <label htmlFor="question-1">What's something you love? Why?</label>
-          <textarea className="worksheet-field" name="question-love"></textarea>
-        </div>
-
-        <div className="question">
-          <label htmlFor="question-2">
+          <label htmlFor="question-laugh">
             What's something that made you laugh recently? Links please!
           </label>
           <textarea
@@ -575,28 +584,26 @@ ${questionEmotion}
         </div>
 
         <div className="question">
-          <label htmlFor="question-3">What keeps you up at night?</label>
+          <label htmlFor="question-memory">
+            What's a fond memory of you and the birthday boi?
+          </label>
           <textarea
             className="worksheet-field"
-            name="question-night"
+            name="question-memory"
           ></textarea>
         </div>
 
         <div className="question">
-          <label htmlFor="emotion">
-            What emotion would you like to explore first?
-          </label>
-          <select name="emotion">
-            <option value="" disabled="" selected="" hidden="">
-              ...
-            </option>
-            <option name="shame" value="shame">
-              Shame
-            </option>
-          </select>
+          <label htmlFor="selfie">
+            We can't take our group pyramid picture this year (for obvious
+            reasons), so upload your selfie here.
+          </label>{" "}
+          <input type="file" id="img" name="selfie" accept="image/*" />
         </div>
 
-        <a onClick={this.checkForm}>{generateFlatSpot("SUBMIT", Gif, Still)}</a>
+        <a onClick={this.checkForm}>
+          {generateFlatSpot("SUBMIT", Gif, Still, "75%")}
+        </a>
       </Layout>
     )
   }

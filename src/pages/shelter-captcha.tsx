@@ -8,7 +8,7 @@ import { shuffle } from "../utils"
 import "./emotional-captcha.css"
 
 import highFive from "../images/high-five.jpg"
-import rave from "../images/90s-rave.jpg"
+import monks from "../images/monks-of-funk.jpg"
 import cuddlePuddle from "../images/cuddle-puddle.jpg"
 import faceMask from "../images/face-mask.jpg"
 import zoomMeeting from "../images/zoom-meeting.jpg"
@@ -24,7 +24,7 @@ const ITEMS = [
     isActive: false,
   },
   {
-    image: rave,
+    image: monks,
     isWanted: true,
     isActive: false,
   },
@@ -87,7 +87,7 @@ class ShelterCaptcha extends React.Component {
   checkImages = () => {
     let valid = true
     this.state.items.forEach(item => {
-      if (item.isActive !== item.isAnnoying) {
+      if (item.isActive !== item.isWanted) {
         location.reload()
         valid = false
       }
@@ -104,15 +104,15 @@ class ShelterCaptcha extends React.Component {
   render() {
     return (
       <Layout key={this.state.isClient}>
-        <SEO title="Shelter Captcha" />
-        <h1>What year is it?</h1>
-        <div>Due to potential rips in the space-time continuum, no time travelers are allowed to enter Shelter Island.</div>
+        <SEO title="Boogie Captcha" />
+        <h1>Boogie Captcha</h1>
+        <div>There's a lot of ticket scalping bots out there trying to snap up passes to Shelter Island.</div>
         <div className="container">
           <div className="captcha-container">
             <div className="header">
               <p>
                 Select all squares that contain something{" "}
-                <strong>wanted</strong>.
+                <strong>you miss</strong>.
               </p>
             </div>
 

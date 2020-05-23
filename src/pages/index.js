@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { generateFlatSpot } from "../utils"
 
-import Gif from "../images/retro-drive.gif"
+import Gif from "../images/shelter-island.gif"
 import Still from "../images/landscape-8bit.jpg"
 
 const IndexPage = () => (
