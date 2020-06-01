@@ -69,6 +69,7 @@ yarn-error.log
 .yarn-integrity
 
 # Emacs
+.dir-locals.el
 .tern-port
 
 # Environment

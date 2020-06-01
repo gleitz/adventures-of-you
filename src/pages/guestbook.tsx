@@ -1,3 +1,5 @@
+/*global jscolor jsPDF */
+
 import React from "react"
 
 import Layout from "../components/layout"
@@ -12,6 +14,10 @@ import "./emotional-worksheet.css"
 class EmotionalWorksheetPage extends React.Component {
   constructor(props) {
     super(props)
+  }
+
+  componentDidMount() {
+    jscolor.installByClassName("jscolor")
   }
 
   checkForm = () => {
