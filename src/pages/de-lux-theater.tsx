@@ -9,7 +9,7 @@ import DriveInKiss from "../images/drive-in-kiss.jpg"
 
 const DeLuxPage = () => (
   <Layout>
-    <SEO title="Shelter Island De Lux Theater" />
+    <SEO description="The Bay Area's most exclusive drive-in establishment" title="Shelter Island De Lux Theater" />
     <h1>Yum! Yum!</h1>
     <div className='padded'>
       <div>
