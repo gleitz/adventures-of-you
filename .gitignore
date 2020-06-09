@@ -74,3 +74,6 @@ yarn-error.log
 
 # Environment
 env/index.js
+
+# Data
+jsonbin/
