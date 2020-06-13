@@ -53,7 +53,7 @@ class YouAreLovePage extends React.Component {
             <div>
               A few notes:
             </div>
-            <div style={{background: '#eee', padding: 30}}>
+          <div style={{background: '#eee', padding: 30, borderRadius: 10}}>
               <ul>
                 <li>When you're about a mile away, tune into 87.9, Shelter Island Radio.</li>
                   <li>Bring your own treats and drinks, and blankets to cuddle up in.</li>
@@ -64,13 +64,13 @@ class YouAreLovePage extends React.Component {
                   <div>
                     <h2>Here are some of the books you're reading:</h2>
                   </div>
-                  <div style={{background: '#eee', padding: 30}}>
+                  <div>
                     {this.state.books &&
                      this.state.books.map((book, i) => {
                        if (!book) {
                          return
                        }
-                       return <div key={i}>{book.bookSelection}</div>
+                       return <div style={{background: '#eee', marginBottom: 30, padding: 30, borderRadius: 10}} key={i}>{book.bookSelection}</div>
                      })}
                   </div>
                 <div>See you soon! Here's some music for your drive:</div>
