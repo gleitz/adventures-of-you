@@ -64,6 +64,21 @@ const saveVenmo = venmoUsername => {
   })
 }
 
+const saveBook = book => {
+  if (!jsonApi) {
+    jsonApi = new JsonBinIoApi(JSBIN_API_KEY)
+  }
+  return getEmotions().then(data => {
+    data.books.push(book)
+    return jsonApi
+      .updateBin({
+        id: JSBIN_BIN_ID,
+        data,
+        versioning: false,
+      })
+  })
+}
+
 const generateFlatSpot = (text, gifSrc, stillSrc, width = "100%") => {
   return (
     <div
@@ -118,4 +133,4 @@ const shuffle = array => {
   return array
 }
 
-export { generateFlatSpot, getRandomInt, shuffle, saveEmotion, getEmotions, saveVenmo }
+export { generateFlatSpot, getRandomInt, shuffle, saveEmotion, getEmotions, saveVenmo, saveBook }
