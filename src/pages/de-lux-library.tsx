@@ -41,7 +41,9 @@ class DeLuxPage extends React.Component {
             <h2><a target="_blank" href="https://drive.google.com/drive/u/0/folders/0Bz011IF2Pu9TUWIxVWxybGJ1Ync">Black History Month Library</a></h2>
           </div>
           <div>What do you want to read first? (leave your name too if you'd like to find buddies for a book club)</div>
-          <textarea placeholder="" className="worksheet-field" name="book-selection"></textarea>
+          <div>
+            <textarea placeholder="" className="worksheet-field" name="book-selection"></textarea>
+          </div>
         </div>
         <a onClick={this.checkForm}>{generateFlatSpot("SHOWTIME", DriveInKiss, DriveIn, "75%")}</a>
       </Layout>

@@ -102,7 +102,7 @@ class Captcha extends React.Component {
     return (
       <Layout key={this.state.isClient}>
         <SEO title="Boogie Captcha" />
-        <div>Tonite's film, set on the hottest day of the year, is a culturally, historically, and aesthetically significant windows into topics that still ring true today. Before we begin, let's get something straight.</div>
+        <div>Tonite's film, set on the hottest day of the year, is a culturally, historically, and aesthetically significant window into important topics that still ring true today. Before we begin, let's get something straight.</div>
         <div className="container">
           <div className="captcha-container">
             <div className="header">

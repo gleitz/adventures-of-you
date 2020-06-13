@@ -27,7 +27,7 @@ const DeLuxPage = () => (
         Want to find the address? Want to know what's playing? Then you better buy a ticket! The price of admission, matched by the De Lux Theater, will be a donation in support of racial justice.
       </div>
     </div>
-    <a href="#">{generateFlatSpot("TICKETS AT NOON", CountdownMovie, DriveIn, "75%")}</a>
+    <a href="/de-lux-captcha">{generateFlatSpot("TICKETS", CountdownMovie, DriveIn, "75%")}</a>
   </Layout>
 )
 

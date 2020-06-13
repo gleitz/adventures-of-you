@@ -55,7 +55,7 @@ class DeLuxPage extends React.Component {
           </div>
           <div>
             <a target="_blank" href="https://www.paypal.me/theokraproject"><h2>The Okra Project</h2></a>
-            <p>The Okra Project is a collective that seeks to address the global crisis faced by Black Trans people by bringing home cooked, healthy, and culturally specific meals and resources to Black Trans People wherever we can reach them.</p>
+            <p>The Okra Project is a collective that seeks to address the global crisis faced by Black Trans people by bringing home cooked, healthy, and culturally specific meals and resources to Black Trans People.</p>
           </div>
           <div>
             <a target="_blank" href="https://unicornriot.ninja/donate/"><h2>Unicorn Riot</h2></a>
