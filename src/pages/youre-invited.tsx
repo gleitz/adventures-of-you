@@ -20,13 +20,13 @@ const IndexPage = () => (
     <h1>Save the Date!</h1>
     <div className='padded'>
       <div>
-      You're invited to <b>Pup's Pod Party: Shelter Island</b>, the Bay Area's most sparse dance party.
+      You're invited to <b>Pup's Pride Party: Shelter Island</b>, the Bay Area's most sparse dance party.
                         </div>
       <div>
-        Want to find the address? Then you gotta play the game!
+        Want to find the address? Then you better buy a ticket! The price of admission, matched by Pup's Pride Party Philanthropists, will be a donation in support of LGBTQ+ rights.
       </div>
       <div>
-        Game opens <b>tomorrow, June 27</b> at noon PST, with socially distant dance party from <b>3PM</b> till sunset.
+        Game opens <b>Sunday, June 28</b> at noon PST, with socially distant dance party from <b>4PM</b> till sunset.
       </div>
       <div>
       </div>
@@ -39,7 +39,7 @@ const IndexPage = () => (
         </ul>
       </div>
   </div>
-  <a href="#">{generateFlatSpot("Tomorrow", DogDance, ShelterIsland, "75%")}</a>
+  <a href="#">{generateFlatSpot("Sunday...", DogDance, ShelterIsland, "75%")}</a>
   </Layout>
 )
 
