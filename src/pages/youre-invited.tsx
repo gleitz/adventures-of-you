@@ -26,7 +26,7 @@ const IndexPage = () => (
         Want to find the address? Then you gotta play the game!
       </div>
       <div>
-        Game opens <b>tomorrow, June 28</b> at noon PST, with socially distant dance party from <b>4PM</b> till sunset.
+        Game opens <b>tomorrow, June 28</b> at noon PST, with socially distant dance party from <b>3PM</b> till sunset.
       </div>
       <div>
       </div>
