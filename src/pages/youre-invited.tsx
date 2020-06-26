@@ -26,12 +26,20 @@ const IndexPage = () => (
         Want to find the address? Then you gotta play the game!
       </div>
       <div>
-        Game opens <b>Sunday, June 28</b> at noon PST, with socially distant dance party from <b>4PM</b> till sunset.
+        Game opens <b>tomorrow, June 28</b> at noon PST, with socially distant dance party from <b>4PM</b> till sunset.
       </div>
       <div>
       </div>
-    </div>
-    <a href="#">{generateFlatSpot("Sunday", DogDance, ShelterIsland, "75%")}</a>
+      <div style={{background: '#eee', padding: 30}}>
+        Remember to:<br/><br/>
+        <ul>
+          <li>Bring masks.</li>
+          <li>Dance 6 feet from others.</li>
+          <li>Please don't make anyone have to remind you to respect the group commitment that makes us feel comfortable creating this space.</li>
+        </ul>
+      </div>
+  </div>
+  <a href="#">{generateFlatSpot("Tomorrow", DogDance, ShelterIsland, "75%")}</a>
   </Layout>
 )
 
