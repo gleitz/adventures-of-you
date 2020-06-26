@@ -11,7 +11,7 @@ import ShelterIsland from "../images/shelter-island.gif"
 const IndexPage = () => (
   <Layout>
     <SEO title="Pup's Pride Party"
-         description="Pup's Pride Party: Shelter Island, the Bay Area's most sparse dance party" />
+         description="Shelter Island, the Bay Area's most sparse dance party" />
     <div style={{ "textAlign": "right", marginBottom: '1rem' }}>
       “There was a star danced,
       <br />

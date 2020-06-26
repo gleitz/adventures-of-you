@@ -4,7 +4,7 @@ module.exports = {
     // description: `You, dear reader, must summon all the power and wisdom of your precious
     //   emotions to snatch triumph from the jaws of digital defeat. You must
     //   choose, but choose wisely.`,
-    description: `Pup's Pod Party: Shelter Island, the Bay Area's most sparse dance party`,
+    description: `Shelter Island, the Bay Area's most sparse dance party`,
     author: `@gatsbyjs`,
   },
   plugins: [
