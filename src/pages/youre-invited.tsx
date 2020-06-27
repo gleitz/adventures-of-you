@@ -36,7 +36,7 @@ const IndexPage = () => (
         <ul>
           <li>Bring masks.</li>
           <li>Dance 6 feet from others.</li>
-          <li>Please don't make anyone have to remind you to respect the group commitment that makes us feel comfortable creating this space.</li>
+          <li>Please respect these two rules. It allows us to feel safe and comfortable creating this space.</li>
         </ul>
       </div>
   </div>
