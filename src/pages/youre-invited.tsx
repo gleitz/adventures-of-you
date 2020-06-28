@@ -40,7 +40,7 @@ const IndexPage = () => (
         </ul>
       </div>
   </div>
-  <a href="/pride-captcha">{generateFlatSpot("Let's Go", DogDance, ShelterIsland, "75%")}</a>
+  <a href="/pride-captcha">{generateFlatSpot("GET A TICKET", DogDance, ShelterIsland, "75%")}</a>
   </Layout>
 )
 
