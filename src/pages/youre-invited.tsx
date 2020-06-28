@@ -43,6 +43,7 @@ const IndexPage = () => (
   <div>
     Click the circle below to begin:
   </div>
+  <br/>
   <a href="/pride-captcha">{generateFlatSpot("GET A TICKET", DogDance, ShelterIsland, "75%")}</a>
   </Layout>
 )

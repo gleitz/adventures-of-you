@@ -5,8 +5,8 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import DriveIn from "../images/drive-in.jpg"
-import DriveInKiss from "../images/drive-in-kiss.jpg"
+import Smiley from "../images/smiley.jpg"
+import GleitzGoggles from "../images/gleitz-goggles.jpg"
 
 import { saveEmotion, generateFlatSpot } from "../utils"
 
@@ -43,8 +43,8 @@ class PridePage extends React.Component {
         <SEO title="Pup's Pride Party Tickets" />
         <h1>Tickets</h1>
         <div className='padded'>
-          <div style={{ float: "right", marginLeft: "0.5rem" }}>
-            {generateFlatSpot("", DriveInKiss, DriveIn, "75%")}
+          <div style={{ float: "right", marginLeft: "0.5rem", width: "50%" }}>
+            {generateFlatSpot("", GleitzGoggles, Smiley, "100%")}
           </div>
           <div>
             While today's socially distant dance party is free, Shelter Island will be matching all donations to organizations and funds that support LGBTQ+ rights. A few are listed below, but feel free to choose your own.
