@@ -27,7 +27,7 @@ const IndexPage = () => (
         Want to find the address? Then you better buy a ticket! The price of admission, matched by Pup's Pride Party Philanthropists, will be a donation in support of LGBTQ+ rights.
       </div>
       <div>
-        Game opens <b>Sunday, June 28</b> at noon PST, with socially distant dance party from <b>4PM</b> till sunset.
+        Game opens <b>TODAY</b> at noon PST, with socially distant dance party from <b>4PM</b> till sunset.
       </div>
       <div>
       </div>
@@ -40,7 +40,7 @@ const IndexPage = () => (
         </ul>
       </div>
   </div>
-  <a href="#">{generateFlatSpot("Sunday...", DogDance, ShelterIsland, "75%")}</a>
+  <a href="/pride-captcha">{generateFlatSpot("Let's Go", DogDance, ShelterIsland, "75%")}</a>
   </Layout>
 )
 
