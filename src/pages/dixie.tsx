@@ -79,7 +79,10 @@ const DixiePage = () => {
 
     axios(config)
       .then(function (response) {
-        setRosenResponse(response.data)
+        const dialogs = response.data.dialog.map((dialog) => {
+          return [{'speaker': '<speaker1>', 'utterance': dialog.map((turn) => turn['utterance']).join(' ')}]
+        })
+        setRosenResponse({'dialog': dialogs})
       })
       .catch(function (error) {
         console.log(error)
@@ -104,21 +107,28 @@ const DixiePage = () => {
             <option value="" disabled="" selected="" hidden="">
               ...
             </option>
-            <option name="player" value="gleitz">
-              🦀 GLEITZ
-            </option>
-            <option name="player" value="vivek">
-              🐙 VIVEK
-            </option>
-            <option name="player" value="travis">
-              🌲 TRAVIS
-            </option>
-            <option name="player" value="chuchu">
-              🧶 CHU CHU
-            </option>
-            <option name="player" value="ebony">
-              🤵🏾 BEIGE
-            </option>
+            <optgroup label="people">
+              <option name="player" value="gleitz">
+                🦀 GLEITZ
+              </option>
+              <option name="player" value="vivek">
+                🐙 VIVEK
+              </option>
+              <option name="player" value="travis">
+                🌲 TRAVIS
+              </option>
+              <option name="player" value="chuchu">
+                🧶 CHU CHU
+              </option>
+            </optgroup>
+            <optgroup label="news">
+              <option name="player" value="ebony">
+                🤵🏾 BEIGE
+              </option>
+              <option name="player" value="fox">
+                👨🏼 WHITE
+              </option>
+            </optgroup>
           </select>
           { player &&
             <div>
