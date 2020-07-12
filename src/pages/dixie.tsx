@@ -120,6 +120,9 @@ const DixiePage = () => {
               <option name="player" value="chuchu">
                 🧶 CHU CHU
               </option>
+              <option name="player" value="rob">
+                🏃 ROB
+              </option>
             </optgroup>
             <optgroup label="news">
               <option name="player" value="ebony">
