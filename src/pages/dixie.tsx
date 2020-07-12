@@ -27,6 +27,10 @@ interface State {
   rosenResponse: RosenResponse;
 }
 
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
 const DixiePage = () => {
 
   const [player, setPlayer] = useState('')
@@ -49,28 +53,39 @@ const DixiePage = () => {
     // })
   }
 
+  useEffect(() => {
+    const dixieFlatline = document.getElementsByName("dixie-flatline")
+    if (dixieFlatline.length > 0 && dixieFlatline[0].value.trim()) {
+      coreSearch(dixieFlatline[0].value)
+    }
+  }, [player]);
+
   const handleSelectPlayer = (event) => {
     const player = event.target.value
     setPlayer(player)
   }
 
-  const runSearch = debounce((text: string) => {
+  const coreSearch = (text: string) => {
+    if (text.trim().length === 0) {
+      return
+    }
     setRosenResponse({
       "dialog": [
         [
           {
             "speaker": "<speaker1>",
-            "utterance": `${text}...`
+            // "utterance": `${text}...`
+            "utterance": `...`
           }
         ],
       ]
     })
 
-    const data = JSON.stringify({"context":[{"speaker":"<speaker1>","utterance":text}]})
+    const data = JSON.stringify({"context":[{"speaker":"<speaker1>","utterance":`${text} I think`}]})
 
     const config = {
       method: 'post',
-      url: `http://${ROSEN_URI}:8002/dialog/${player}?temperature=0.9&top_k=3&top_p=0.9&repetition_penalty=1.1&num_return_sequences=10&max_length=100&num_beams=1`,
+      url: `http://${ROSEN_URI}:8002/dialog/${player}?temperature=0.9&top_k=3&top_p=0.9&repetition_penalty=1.1&num_return_sequences=1&max_length=100&num_beams=1`,
       headers: {
         'Content-Type': 'application/json'
       },
@@ -80,14 +95,16 @@ const DixiePage = () => {
     axios(config)
       .then(function (response) {
         const dialogs = response.data.dialog.map((dialog) => {
-          return [{'speaker': '<speaker1>', 'utterance': dialog.map((turn) => turn['utterance']).join(' ')}]
+          return [{'speaker': '<speaker1>', 'utterance': capitalizeFirstLetter(dialog.map((turn) => turn['utterance']).slice(0,2).join(' ').replace(`${text} I think`, '').trim())}]
         })
         setRosenResponse({'dialog': dialogs})
       })
       .catch(function (error) {
         console.log(error)
       });
-  }, 1000)
+  }
+
+  const runSearch = debounce(coreSearch, 1000)
 
   const handleTyping = (event) => {
     runSearch(event.target.value)
@@ -123,6 +140,9 @@ const DixiePage = () => {
               <option name="player" value="rob">
                 🏃 ROB
               </option>
+              <option name="player" value="rob">
+                🐉 MICHELLE
+              </option>
             </optgroup>
             <optgroup label="news">
               <option name="player" value="ebony">
@@ -135,7 +155,8 @@ const DixiePage = () => {
           </select>
           { player &&
             <div>
-              <label htmlFor="dixie-flatline">Begin writing in the first person:</label>
+              {/* <label htmlFor="dixie-flatline">Begin writing in the first person:</label> */}
+              <label htmlFor="dixie-flatline">Ask a question:</label>
               <textarea placeholder=""
                         className="worksheet-field"
                         name="dixie-flatline"
