@@ -20,3 +20,21 @@ header {
 .static:hover {
   opacity:0;
 }
+
+.Flipcard {
+  width: 100%;
+}
+
+.Flipcard-front, Flipcard-back {
+  width: 100%;
+}
+
+.flip {
+  /* right: -80px; */
+  /* padding: 50px 100px; */
+  /* position: absolute; */
+  /* top: 0px; */
+  /* border-radius: 10px; */
+  /* transform: rotate(270deg); */
+  /* border: 1px solid #ccc; */
+}
