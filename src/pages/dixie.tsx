@@ -65,10 +65,7 @@ const DixiePage = () => {
   }
 
   useEffect(() => {
-    const dixieFlatline = getDixieFlatline()
-    if (dixieFlatline && dixieFlatline.value) {
-      coreSearch(dixieFlatline.value.trim())
-    }
+      coreSearch()
   }, [player]);
 
   const handleSelectPlayer = (event) => {
@@ -76,7 +73,14 @@ const DixiePage = () => {
     setPlayer(player)
   }
 
-  const coreSearch = (text: string) => {
+  const coreSearch = () => {
+    const dixieFlatline = getDixieFlatline()
+    if (!dixieFlatline || !dixieFlatline.value) {
+      return
+    }
+
+    const text = dixieFlatline.value.trim()
+
     if (cancel) {
       cancel('Operation canceled by the user.')
     }
@@ -207,28 +211,28 @@ const DixiePage = () => {
           </Grid>
           { player &&
             <div>
-            <Grid item xs={12} style={{position: 'relative', minHeight: '218px'}}>
-              <button className="flip" style={{float: 'right', marginRight: '-75px'}} type="button" onClick={() => setIsFirstPerson(!isFirstPerson)}>Flip</button>
-              <Flipcard flipped={isFirstPerson} style={{margin: '0 auto', minWidth: '500px'}}>
+            <Grid item xs={12} style={{position: 'relative', marginBottom: '32px', minHeight: '230px'}}>
+              <Flipcard className="min-width-500" flipped={isFirstPerson} style={{margin: '0 auto'}}>
                 <div>
                   <label htmlFor="dixie-flatline"><b>Ask a question</b></label>
                   <textarea placeholder="Ask yourself what you want to know."
-                            className="worksheet-field"
+                            className="worksheet-field min-width-500"
                             name="dixie-flatline"
-                            onChange={handleTyping}
-                            style={{minWidth: '500px'}}></textarea>
+                            onChange={handleTyping}></textarea>
                 </div>
                 <div>
                   <label htmlFor="dixie-flatline"><b>Start a sentence for you to finish</b></label>
                   <textarea placeholder="Use I statements, because this is you."
-                            className="worksheet-field"
+                            className="worksheet-field min-width-500"
                             name="dixie-flatline"
-                            onChange={handleTyping}
-                            style={{minWidth: '500px'}}></textarea>
+                            onChange={handleTyping}></textarea>
                 </div>
               </Flipcard>
+              <div style={{position: 'absolute', bottom: '0', right:'0'}}>
+                <button className="flip" type="button" onClick={() => setIsFirstPerson(!isFirstPerson)}>Flip</button>
+                <button className="flip" type="button" style={{marginLeft: '18px'}} onClick={coreSearch}>Submit</button>
+              </div>
             </Grid>
-            <hr/>
             </div>
           }
           <Grid xs={8} style={{width: '100%'}}>

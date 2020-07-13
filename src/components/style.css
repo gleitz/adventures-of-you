@@ -38,3 +38,22 @@ header {
   /* transform: rotate(270deg); */
   /* border: 1px solid #ccc; */
 }
+
+.Flipcard-flipper {
+  display: flex;
+  transform: none !important;
+  min-width: 300px;
+}
+
+@media (min-width: 750px) {
+  /* Use the flipper as a Flexbox container: */
+  .Flipcard-flipper {
+    display: flex;
+    transform: none !important;
+    min-width: 500px;
+  }
+
+  .min-width-500 {
+    min-width: 500px;
+  }
+}
