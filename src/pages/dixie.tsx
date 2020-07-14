@@ -288,7 +288,7 @@ const DixiePage = () => {
                 return (
                   <div key={i}>
                     {
-                      dialog.map((turn) => <div key={turn.utterance}><TypeIt options={{waitUntilVisible: true, speed: 70, strings: [turn.utterance.replace('\n', '<br>').replace(/\n/g, '<br>')]}}></TypeIt></div>)
+                      dialog.map((turn) => <div key={turn.utterance}><TypeIt options={{waitUntilVisible: true, speed: 70, strings: [turn.utterance.replace('\n', '<br>').replace(/\n/g, '<br>').replace(/\\n/g, '<br>')]}}></TypeIt></div>)
                     }
                     <hr/>
                     <br/>
