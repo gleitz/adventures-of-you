@@ -54,7 +54,7 @@ const DixiePage = () => {
 
   const [player, setPlayer] = useState('')
   const [rosenResponse, setRosenResponse] = useState({})
-  const [isFirstPerson, setIsFirstPerson] = useState(false)
+  const [isFirstPerson, setIsFirstPerson] = useState(true)
 
   const getDixieFlatline = React.useCallback(() => {
     const flatlines = document.getElementsByName("dixie-flatline")
@@ -123,7 +123,13 @@ const DixiePage = () => {
         let dialogs = response.data.dialog.map((dialog) => {
           let utterance
           if (isFirstPerson) {
-            utterance = dialog.map((turn) => turn['utterance']).join(' ').trim()
+            utterance = dialog.map((turn) => {
+              let utterance = turn['utterance'].trim()
+              if (utterance && !!utterance[utterance.length-1].match(/^[0-9a-z]+$/)) { // sentence does not end with punctuation
+                utterance = `${utterance}.`
+              }
+              return utterance
+            }).join(' ').trim()
           } else {
             const turns = dialog.map((turn) => turn['utterance']).slice(0,2).map((turn) => {
               turn = turn.replace(`${text} I think`, '')
@@ -158,7 +164,7 @@ const DixiePage = () => {
           if (shouldExclude) {
             return false
           }
-          avgSizeSet.add(dialog[0].avgSizeSet)
+          avgSizeSet.add(dialog[0].avgSize)
           return true
         })
 
@@ -282,7 +288,7 @@ const DixiePage = () => {
                 return (
                   <div key={i}>
                     {
-                      dialog.map((turn) => <div key={turn.utterance}><TypeIt options={{waitUntilVisible: true, speed: 70, strings: [turn.utterance.replace('\n', '<br>')]}}></TypeIt></div>)
+                      dialog.map((turn) => <div key={turn.utterance}><TypeIt options={{waitUntilVisible: true, speed: 70, strings: [turn.utterance.replace('\n', '<br>').replace(/\n/g, '<br>')]}}></TypeIt></div>)
                     }
                     <hr/>
                     <br/>
