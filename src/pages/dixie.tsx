@@ -222,6 +222,9 @@ const DixiePage = () => {
                 <option name="player" value="michelle">
                   🐉 MICHELLE
                 </option>
+                <option name="player" value="selene">
+                  🍑 SELENE
+                </option>
               </optgroup>
               <optgroup label="onion">
                 <option name="player" value="herbert">
