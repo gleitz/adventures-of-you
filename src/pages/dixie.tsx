@@ -125,7 +125,7 @@ const DixiePage = () => {
           if (isFirstPerson) {
             utterance = dialog.map((turn) => {
               let utterance = turn['utterance'].trim()
-              if (utterance && !!utterance[utterance.length-1].match(/^[0-9a-z]+$/)) { // sentence does not end with punctuation
+              if (utterance && !!utterance[utterance.length-1].match(/^[0-9a-zA-Z]+$/)) { // sentence does not end with punctuation
                 utterance = `${utterance}.`
               }
               return utterance
