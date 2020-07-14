@@ -47,7 +47,7 @@ interface State {
 }
 
 function capitalizeFirstLetter(string) {
-  return string.charAt(0).toUpperCase() + string.slice(1);
+  return string.charAt(0).toUpperCase() + string.slice(1)
 }
 
 const DixiePage = () => {
@@ -56,24 +56,20 @@ const DixiePage = () => {
   const [rosenResponse, setRosenResponse] = useState({})
   const [isFirstPerson, setIsFirstPerson] = useState(false)
 
-  const getDixieFlatline = () => {
+  const getDixieFlatline = React.useCallback(() => {
     const flatlines = document.getElementsByName("dixie-flatline")
     if (flatlines.length === 0) {
       return []
     }
     return isFirstPerson ? flatlines[1] : flatlines[0]
-  }
-
-  useEffect(() => {
-      coreSearch()
-  }, [player]);
+  }, [isFirstPerson])
 
   const handleSelectPlayer = (event) => {
     const player = event.target.value
     setPlayer(player)
   }
 
-  const coreSearch = () => {
+  const coreSearch = React.useCallback(() => {
     const dixieFlatline = getDixieFlatline()
     if (!dixieFlatline || !dixieFlatline.value) {
       return
@@ -110,7 +106,7 @@ const DixiePage = () => {
       },
       data : data,
       cancelToken: new CancelToken((c) => {
-        cancel = c;
+        cancel = c
       })
     }
 
@@ -146,8 +142,12 @@ const DixiePage = () => {
       })
       .catch(function (error) {
         console.log(error)
-      });
-  }
+      })
+  }, [getDixieFlatline, isFirstPerson, player])
+
+  useEffect(() => {
+    coreSearch()
+  }, [player, coreSearch])
 
   const runSearch = debounce(coreSearch, 1000)
 
@@ -195,8 +195,11 @@ const DixiePage = () => {
                 <option name="player" value="rob">
                   🏃 ROB
                 </option>
-                <option name="player" value="rob">
+                <option name="player" value="michelle">
                   🐉 MICHELLE
+                </option>
+                <option name="player" value="herbert">
+                  🧅 HERBERT
                 </option>
               </optgroup>
               <optgroup label="news">
@@ -241,7 +244,7 @@ const DixiePage = () => {
                 return (
                   <div key={i}>
                     {
-                      dialog.map((turn, j) => <div key={turn.utterance}><TypeIt options={{waitUntilVisible: true, speed: 70, strings: [turn.utterance.replace('\n', '<br>')]}}></TypeIt></div>)
+                      dialog.map((turn) => <div key={turn.utterance}><TypeIt options={{waitUntilVisible: true, speed: 70, strings: [turn.utterance.replace('\n', '<br>')]}}></TypeIt></div>)
                     }
                     <hr/>
                     <br/>
