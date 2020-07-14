@@ -75,26 +75,30 @@ const DixiePage = () => {
       return
     }
 
-    const text = dixieFlatline.value.trim()
+    let text = dixieFlatline.value.trim()
 
     if (cancel) {
       cancel('Operation canceled by the user.')
     }
 
-    if (text.trim().length === 0) {
+    if (text.length === 0) {
       return
+    }
+
+    if (!text.endsWith('?') && !isFirstPerson) {
+      text = `${text}?`
     }
     setRosenResponse({
       "dialog": [
         [
           {
             "speaker": "<speaker1>",
-            // "utterance": `${text}...`
             "utterance": `...`
           }
         ],
       ]
     })
+
 
     const data = JSON.stringify({"context":[{"speaker":"<speaker1>","utterance": isFirstPerson ? text : `${text} I think`}]})
 
@@ -110,6 +114,9 @@ const DixiePage = () => {
       })
     }
 
+    let longestPhraseLength = 0
+    let largestAvgSize = 0
+
     axios(config)
       .then(function (response) {
         const avgSizeSet = new Set()
@@ -118,16 +125,33 @@ const DixiePage = () => {
           if (isFirstPerson) {
             utterance = dialog.map((turn) => turn['utterance']).join(' ').trim()
           } else {
-            utterance = capitalizeFirstLetter(dialog.map((turn) => turn['utterance']).slice(0,2).join(' ').replace(`${text} I think`, '').trim())
+            const turns = dialog.map((turn) => turn['utterance']).slice(0,2).map((turn) => {
+              turn = turn.replace(`${text} I think`, '')
+              if (turn && !!turn[turn.length-1].match(/^[0-9a-z]+$/)) { // sentence does not end with punctuation
+                turn = `${turn}.`
+              }
+              return turn
+            })
+            utterance = capitalizeFirstLetter(turns.join(' ').trim())
           }
 
           const words = utterance.split(' ')
           const avgSize = words.map((word) => Math.min(word.length, 10)).reduce((a, b) => a + b, 0) / words.length
           const phraseLength = words.length
+          if (phraseLength > longestPhraseLength) {
+            longestPhraseLength = phraseLength
+          }
+          if (avgSize > largestAvgSize) {
+            largestAvgSize = avgSize
+          }
           return [{'speaker': '<speaker1>', utterance, phraseLength, avgSize}]
         })
 
-        dialogs.sort((a,b) => (a[0].avgSize > b[0].avgSize) ? 1 : ((b[0].avgSize > a[0].avgSize) ? -1 : 0)).reverse()
+        const calculateWeight = (turn) => {
+          return (turn.avgSize / largestAvgSize) * 0.6 + (turn.utterance.split(' ').length / longestPhraseLength) * 0.4
+        }
+
+        dialogs.sort((a,b) => (calculateWeight(a[0]) > calculateWeight(b[0])) ? 1 : ((calculateWeight(b[0]) > calculateWeight(a[0])) ? -1 : 0)).reverse()
 
         dialogs = dialogs.filter((dialog) => {
           const shouldExclude = avgSizeSet.has(dialog[0].avgSize)
@@ -198,8 +222,19 @@ const DixiePage = () => {
                 <option name="player" value="michelle">
                   🐉 MICHELLE
                 </option>
+              </optgroup>
+              <optgroup label="onion">
                 <option name="player" value="herbert">
                   🧅 HERBERT
+                </option>
+                <option name="player" value="zweibel">
+                  🧅 ZWEIBEL
+                </option>
+                <option name="player" value="jim">
+                  🧅 JIM
+                </option>
+                <option name="player" value="jean">
+                  🧅 JEAN
                 </option>
               </optgroup>
               <optgroup label="news">
@@ -214,28 +249,28 @@ const DixiePage = () => {
           </Grid>
           { player &&
             <div>
-            <Grid item xs={12} style={{position: 'relative', marginBottom: '32px', minHeight: '230px'}}>
-              <Flipcard className="min-width-500" flipped={isFirstPerson} style={{margin: '0 auto'}}>
-                <div>
-                  <label htmlFor="dixie-flatline"><b>Ask a question</b></label>
-                  <textarea placeholder="Ask yourself what you want to know."
-                            className="worksheet-field min-width-500"
-                            name="dixie-flatline"
-                            onChange={handleTyping}></textarea>
+              <Grid item xs={12} style={{position: 'relative', marginBottom: '32px', minHeight: '230px'}}>
+                <Flipcard className="min-width-500" flipped={isFirstPerson} style={{margin: '0 auto'}}>
+                  <div>
+                    <label htmlFor="dixie-flatline"><b>Ask a question</b></label>
+                    <textarea placeholder="Ask yourself what you want to know."
+                              className="worksheet-field min-width-500"
+                              name="dixie-flatline"
+                              onChange={handleTyping}></textarea>
+                  </div>
+                  <div>
+                    <label htmlFor="dixie-flatline"><b>Start a sentence for you to finish</b></label>
+                    <textarea placeholder="Use I statements, because this is you."
+                              className="worksheet-field min-width-500"
+                              name="dixie-flatline"
+                              onChange={handleTyping}></textarea>
+                  </div>
+                </Flipcard>
+                <div style={{position: 'absolute', bottom: '0', right:'0'}}>
+                  <button className="flip" type="button" onClick={() => setIsFirstPerson(!isFirstPerson)}>Flip</button>
+                  <button className="flip" type="button" style={{marginLeft: '18px'}} onClick={coreSearch}>Submit</button>
                 </div>
-                <div>
-                  <label htmlFor="dixie-flatline"><b>Start a sentence for you to finish</b></label>
-                  <textarea placeholder="Use I statements, because this is you."
-                            className="worksheet-field min-width-500"
-                            name="dixie-flatline"
-                            onChange={handleTyping}></textarea>
-                </div>
-              </Flipcard>
-              <div style={{position: 'absolute', bottom: '0', right:'0'}}>
-                <button className="flip" type="button" onClick={() => setIsFirstPerson(!isFirstPerson)}>Flip</button>
-                <button className="flip" type="button" style={{marginLeft: '18px'}} onClick={coreSearch}>Submit</button>
-              </div>
-            </Grid>
+              </Grid>
             </div>
           }
           <Grid xs={8} style={{width: '100%'}}>
