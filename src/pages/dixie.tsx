@@ -88,16 +88,33 @@ const DixiePage = () => {
     if (!text.endsWith('?') && !isFirstPerson) {
       text = `${text}?`
     }
+
+    let loadingUtterance = `...`
+
     setRosenResponse({
       "dialog": [
         [
           {
             "speaker": "<speaker1>",
-            "utterance": `...`
+            "utterance": loadingUtterance
           }
         ],
       ]
     })
+
+    const loadingInterval = setInterval(() => {
+      loadingUtterance = `${loadingUtterance} ...`
+      setRosenResponse({
+        "dialog": [
+          [
+            {
+              "speaker": "<speaker1>",
+              "utterance": loadingUtterance
+            }
+          ],
+        ]
+      })
+    }, 2000)
 
 
     const data = JSON.stringify({"context":[{"speaker":"<speaker1>","utterance": isFirstPerson ? text : `${text} I think`}]})
@@ -119,6 +136,9 @@ const DixiePage = () => {
 
     axios(config)
       .then(function (response) {
+
+        clearInterval(loadingInterval)
+
         const avgSizeSet = new Set()
         let dialogs = response.data.dialog.map((dialog) => {
           let utterance
@@ -133,7 +153,7 @@ const DixiePage = () => {
           } else {
             const turns = dialog.map((turn) => turn['utterance']).slice(0,2).map((turn) => {
               turn = turn.replace(`${text} I think`, '')
-              if (turn && !!turn[turn.length-1].match(/^[0-9a-z]+$/)) { // sentence does not end with punctuation
+              if (turn && !!turn[turn.length-1].match(/^[0-9a-zA-Z]+$/)) { // sentence does not end with punctuation
                 turn = `${turn}.`
               }
               return turn
@@ -172,6 +192,17 @@ const DixiePage = () => {
       })
       .catch(function (error) {
         console.log(error)
+        clearInterval(loadingInterval)
+        setRosenResponse({
+          "dialog": [
+            [
+              {
+                "speaker": "<speaker1>",
+                "utterance": "Sorry, an error occurred."
+              }
+            ],
+          ]
+        })
       })
   }, [getDixieFlatline, isFirstPerson, player])
 
