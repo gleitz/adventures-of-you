@@ -326,7 +326,7 @@ const DixiePage = () => {
                               name="dixie-flatline"
                               onChange={handleTyping}></textarea>
                     <Grid item xs={12}>
-                      <select name="suggestion" style={{width: '100%'}} value="default" onChange={handleSelectSuggestion}>
+                      <select name="suggestion" style={{width: '100%', fontStyle: 'italic', fontSize: '0.8em'}} value="default" onChange={handleSelectSuggestion}>
                         <option value="default" disabled="" selected="" hidden="">
                           or, select a suggested question
                         </option>
