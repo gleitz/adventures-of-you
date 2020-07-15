@@ -29,6 +29,26 @@ const classes = {
   }
 }
 
+const questionSuggestions = [
+  'What is your greatest extravagance?',
+  'What is your idea of perfect happiness?',
+  'What is your greatest fear?',
+  'What is the greatest love of your life?',
+  'What do you consider your greatest achievement?',
+  'What is your most treasured possession?',
+  'What is your greatest regret?',
+  'What is your motto?',
+]
+
+const firstPersonSuggestions = [
+  'Last night I dreamed that ',
+  'I\'ve always wanted to ',
+  'I\'ve decided to change a few things: 1.',
+  'I promise to',
+  'It\'s said that',
+  'When I was growing up',
+]
+
 // import DriveIn from "../images/drive-in.jpg"
 // import DriveInKiss from "../images/drive-in-kiss.jpg"
 
@@ -67,6 +87,13 @@ const DixiePage = () => {
   const handleSelectPlayer = (event) => {
     const player = event.target.value
     setPlayer(player)
+  }
+
+  const handleSelectSuggestion = (event) => {
+    const dixieFlatline = getDixieFlatline()
+    const suggestion = event.target.value
+    dixieFlatline.value = suggestion
+    coreSearch()
   }
 
   const coreSearch = React.useCallback(() => {
@@ -216,6 +243,7 @@ const DixiePage = () => {
     if (cancel) {
       cancel('Operation canceled by the user.')
     }
+
     runSearch(event.target.value)
   }
 
@@ -289,7 +317,7 @@ const DixiePage = () => {
           </Grid>
           { player &&
             <div>
-              <Grid item xs={12} style={{position: 'relative', marginBottom: '32px', minHeight: '230px'}}>
+              <Grid item xs={12} style={{position: 'relative', marginBottom: '32px', minHeight: '320px'}}>
                 <Flipcard className="min-width-500" flipped={isFirstPerson} style={{margin: '0 auto'}}>
                   <div>
                     <label htmlFor="dixie-flatline"><b>Ask a question</b></label>
@@ -297,6 +325,18 @@ const DixiePage = () => {
                               className="worksheet-field min-width-500"
                               name="dixie-flatline"
                               onChange={handleTyping}></textarea>
+                    <Grid item xs={12}>
+                      <select name="suggestion" style={{width: '100%'}} value="default" onChange={handleSelectSuggestion}>
+                        <option value="default" disabled="" selected="" hidden="">
+                          or, select a suggested question
+                        </option>
+                        {questionSuggestions.map((suggestion) =>
+                          (<option name="suggestion" value={suggestion} key={suggestion}>
+                             {suggestion}
+                           </option>)
+                        )}
+                      </select>
+                    </Grid>
                   </div>
                   <div>
                     <label htmlFor="dixie-flatline"><b>Start a sentence for you to finish</b></label>
@@ -304,9 +344,21 @@ const DixiePage = () => {
                               className="worksheet-field min-width-500"
                               name="dixie-flatline"
                               onChange={handleTyping}></textarea>
+                    <Grid item xs={12}>
+                      <select name="suggestion" style={{width: '100%', fontStyle: 'italic', fontSize: '0.8em'}} value="default" onChange={handleSelectSuggestion}>
+                        <option value="default" disabled="" selected="" hidden="">
+                          or, select a sentence starter
+                        </option>
+                        {firstPersonSuggestions.map((suggestion) =>
+                          (<option name="suggestion" value={suggestion} key={suggestion}>
+                             {suggestion}...
+                           </option>)
+                        )}
+                      </select>
+                    </Grid>
                   </div>
                 </Flipcard>
-                <div style={{position: 'absolute', bottom: '0', right:'0'}}>
+                <div style={{position: 'absolute', bottom: '16px', right:'0'}}>
                   <button className="flip" type="button" onClick={() => setIsFirstPerson(!isFirstPerson)}>Flip</button>
                   <button className="flip" type="button" style={{marginLeft: '18px'}} onClick={coreSearch}>Submit</button>
                 </div>
