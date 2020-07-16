@@ -178,7 +178,7 @@ const DixiePage = () => {
               return utterance
             }).join(' ').trim()
           } else {
-            const turns = dialog.map((turn) => turn['utterance']).slice(0,2).map((turn) => {
+            const turns = dialog.map((turn) => turn['utterance']).map((turn) => {
               turn = turn.replace(`${text} I think`, '')
               if (turn && !!turn[turn.length-1].match(/^[0-9a-zA-Z]+$/)) { // sentence does not end with punctuation
                 turn = `${turn}.`
@@ -289,6 +289,9 @@ const DixiePage = () => {
                 </option>
                 <option name="player" value="selene">
                   🍑 SELENE
+                </option>
+                <option name="player" value="teener">
+                  🕸 TEENER
                 </option>
               </optgroup>
               <optgroup label="onion">
