@@ -41,9 +41,9 @@ const questionSuggestions = [
 ]
 
 const firstPersonSuggestions = [
-  'Last night I dreamed that ',
+  'Last night I had the strangest dream. ',
   'I\'ve always wanted to ',
-  'I\'ve decided to change a few things: 1.',
+  'I\'ve decided to change a few things about my life: 1.',
   'I promise to',
   'It\'s said that',
   'When I was growing up',
