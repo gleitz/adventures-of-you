@@ -225,7 +225,7 @@ const DixiePage = () => {
             [
               {
                 "speaker": "<speaker1>",
-                "utterance": "Sorry, an error occurred."
+                "utterance": "."
               }
             ],
           ]
