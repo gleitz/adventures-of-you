@@ -269,25 +269,25 @@ const DixiePage = () => {
                 ...
               </option>
               <optgroup label="people">
-                <option name="player" value="gleitz">
+                <option name="player" value="gleitz_dialog">
                   🦀 GLEITZ
                 </option>
-                <option name="player" value="vivek">
+                <option name="player" value="vivek_dialog">
                   🐙 VIVEK
                 </option>
-                <option name="player" value="travis">
+                <option name="player" value="travis_dialog">
                   🌲 TRAVIS
                 </option>
-                <option name="player" value="chuchu">
+                <option name="player" value="chuchu_dialog">
                   🧶 CHU CHU
                 </option>
-                <option name="player" value="rob">
+                <option name="player" value="rob_dialog">
                   🏃 ROB
                 </option>
-                <option name="player" value="michelle">
+                <option name="player" value="michelle_dialog">
                   🐉 MICHELLE
                 </option>
-                <option name="player" value="selene">
+                <option name="player" value="selene_dialog">
                   🍑 SELENE
                 </option>
                 <option name="player" value="teener">
