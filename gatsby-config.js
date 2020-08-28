@@ -35,16 +35,11 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          {
-            family: `Rubik`,
-            variants: [`400`, `700`],
-          },
-          {
-            family: `Rubik Mono One`,
-          },
+          'rubik:400,700',
+          'rubik mono one'
         ],
       },
     },
