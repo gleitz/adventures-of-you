@@ -27,7 +27,7 @@ class MoFWednesdayWorshipPage extends Component {
         <SEO description="with the Monks of Funk" title="Wednesday Worship" />
         <div>
           <a href="https://map.highfidelity.com/2EnLzUs798qmTxx6?mapJSON=https%3A%2F%2Fapi.jsonbin.io%2Fb%2F5f2195aec1edc4661760da97%2Flatest">
-            {generateFlatSpot("", PlayaSign, MonksLogo, "60%")}
+            {generateFlatSpot("", PlayaSign, MonksLogo, "33%")}
           </a>
         </div>
         <div className="padded" style={{ textAlign: "center" }}>
