@@ -32,10 +32,10 @@ const IndexPage = () => (
     <a href={mailto}>{generateFlatSpot("RSVP", DogDance, ShelterIsland, "40%")}</a>
     <div className='padded'>
       <div>
-      You're invited to <b>Shelter Island: A May Partay</b>, the Bay Area's most sparse dance party.
+      You're invited to <b>Shelter Island: A May Partay</b>, the Bay Area's most sparse dance party. This month we're celebrating the birth of Benjamina P. Glittertits.
       </div>
       <div>
-        Want to find the address? Then you better buy a ticket! The price of admission will be a donation in support of indigenous rights organizations, matched by May Partay Philanthropists.
+        Want to find the address? Then you better buy a ticket! The price of admission will be a donation to indigenous rights organizations, matched by May Partay Philanthropists.
       </div>
       <div>
         Game opens <b>May 22</b> at noon with outdoor dance partay from <b>3PM till Sunset</b>. The location will be within biking/driving distance of Oakland.
