@@ -11,6 +11,18 @@ import Calendar from "../images/calendar.jpg"
 
 const mailto = "mailto:hello@adventuresofyou.online?subject=A May Partay&body=Name:%0D%0A%0D%0ARSVP:%0D%0A%0D%0AFavorite Color:%0D%0A%0D%0AA Book You're Reading:%0D%0A%0D%0AComments/Questions/Affirmations:%0D%0A%0D%0A"
 
+const names = [
+  "Benjamina P. Glittertits",
+  "Banjomon Gleitzerino",
+  "Benjian Gleitz-Gordon-Levitt",
+  "bEnjAMin gLEItzzzzz",
+  "The Earl of Gleitz",
+  "the unbreakable Benny Gleitz",
+  "B. Gleitz, PhD CCNA Sr. Jr. III",
+]
+
+const randomElement = (array) => array[Math.floor(Math.random() * array.length)];
+
 const IndexPage = () => (
   <Layout>
     <SEO title="A May Partay"
@@ -32,7 +44,7 @@ const IndexPage = () => (
     <a href={mailto}>{generateFlatSpot("RSVP", DogDance, ShelterIsland, "40%")}</a>
     <div className='padded'>
       <div>
-      You're invited to <b>Shelter Island: A May Partay</b>, the Bay Area's most sparse dance party. This month we're celebrating the birth of Benjamina P. Glittertits.
+      You're invited to <b>Shelter Island: A May Partay</b>, the Bay Area's most sparse dance party. This month we're celebrating the birth of { randomElement(names) }.
       </div>
       <div>
         Want to find the address? Then you better buy a ticket! The price of admission will be a donation to indigenous rights organizations, matched by May Partay Philanthropists.
