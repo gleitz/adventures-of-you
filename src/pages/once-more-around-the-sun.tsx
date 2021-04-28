@@ -9,7 +9,7 @@ import DogDance from "../images/dog-dance.gif"
 import ShelterIsland from "../images/shelter-island.gif"
 import Calendar from "../images/calendar.jpg"
 
-const mailto = "mailto:hello@adventuresofyou.online?subject=A May Partay&body=Name:%0D%0A%0D%0AFavorite Color:%0D%0A%0D%0AA Book You're Reading:%0D%0A%0D%0AComments/Questions/Affirmations:%0D%0A%0D%0A"
+const mailto = "mailto:hello@adventuresofyou.online?subject=A May Partay&body=Name:%0D%0A%0D%0ARSVP:%0D%0A%0D%0AFavorite Color:%0D%0A%0D%0AA Book You're Reading:%0D%0A%0D%0AComments/Questions/Affirmations:%0D%0A%0D%0A"
 
 const IndexPage = () => (
   <Layout>
@@ -35,7 +35,7 @@ const IndexPage = () => (
       You're invited to <b>Shelter Island: A May Partay</b>, the Bay Area's most sparse dance party.
       </div>
       <div>
-        Want to find the address? Then you better buy a ticket! The price of admission, matched by May Partay Philanthropists, will be a donation in support of indigenous rights organizations.
+        Want to find the address? Then you better buy a ticket! The price of admission will be a donation in support of indigenous rights organizations, matched by May Partay Philanthropists.
       </div>
       <div>
         Game opens <b>May 22</b> at noon with outdoor dance partay from <b>3PM till Sunset</b>. The location will be within biking/driving distance of Oakland.
@@ -53,11 +53,9 @@ const IndexPage = () => (
       </div>
        */}
   </div>
-    {/*
-    <div>
-  Click the circle below to begin:
-      </div>
-    */}
+  <div>
+    Click the circle below to RSVP:
+  </div>
 
   <br/>
       <a href={mailto}>{generateFlatSpot("🌙", SoulTrain, Calendar, "80%")}</a>

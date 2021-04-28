@@ -51,13 +51,13 @@ const IndexPage = () => (
     */}
     <div className='padded'>
       <div>
-        The year is 2020. All places of recreation have been closed. A virus lurks in secret, turning friends and family members into suspicious vectors. Friendship and celebrations have been reduced to awkward zoom calls.
+        The year is 2021. All places of recreation have been closed. A virus lurks in secret, turning friends and family members into suspicious vectors. Friendship and celebrations have been reduced to awkward zoom calls.
       </div>
       <div>
         <b>BUT</b> &mdash; another world is possible.
       </div>
       <div>
-        Through the powers of technology, we've recreated 2020's hottest (and only) club: <b>Shelter Island</b>.
+        Through the powers of technology, we've recreated 2021's hottest (and only) club: <b>Shelter Island</b>.
       </div>
       <div>
         A secret speakeasy, out in the open, but hidden from plain sight. Want in? You've got to complete a couple challenges...
