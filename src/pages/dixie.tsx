@@ -15,8 +15,6 @@ import SEO from "../components/seo"
 
 import { debounce } from "../utils"
 
-import { ROSEN_URI } from "gatsby-env-variables"
-
 let cancel // for cancelling Axios request
 
 const classes = {
@@ -148,7 +146,7 @@ const DixiePage = () => {
 
     const config: AxiosRequestConfig = {
       method: 'post',
-      url: `http://${ROSEN_URI}:8002/dialog/${player}?temperature=0.9&top_k=3&top_p=0.9&repetition_penalty=1.1&num_return_sequences=10&max_length=100&num_beams=1`,
+      url: `http://${process.env.ROSEN_URI}:8002/dialog/${player}?temperature=0.9&top_k=3&top_p=0.9&repetition_penalty=1.1&num_return_sequences=10&max_length=100&num_beams=1`,
       headers: {
         'Content-Type': 'application/json'
       },

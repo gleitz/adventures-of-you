@@ -1,9 +1,10 @@
 import React from "react"
 import styled from "styled-components"
 
-const JsonBinIoApi = require("jsonbin-io-api")
+import { readBin, updateBin } from './jsonBinApi'
 
-import { JSBIN_API_KEY, JSBIN_BIN_ID } from "gatsby-env-variables"
+const JSBIN_API_KEY = process.env.GATSBY_JSBIN_API_KEY
+const JSBIN_BIN_ID = process.env.GATSBY_JSBIN_BIN_ID
 
 import Spot from "./components/spot"
 import FlatText from "./components/flattext"
@@ -21,29 +22,21 @@ const FlatTextCentered = styled.div`
   pointer-events: none;
 `
 
-let jsonApi
 const getEmotions = () => {
-  if (!jsonApi) {
-    jsonApi = new JsonBinIoApi(JSBIN_API_KEY)
-  }
-  return jsonApi.readBin({
-    id: JSBIN_BIN_ID,
-    version: "latest",
-  })
+  return readBin(JSBIN_BIN_ID, "latest")
 }
 
 const saveEmotion = emotion => {
-  if (!jsonApi) {
-    jsonApi = new JsonBinIoApi(JSBIN_API_KEY)
-  }
   return getEmotions().then(data => {
+    if (!data.emotions) {
+      data = { emotions: [] }
+    }
     data.emotions.push(emotion)
-    return jsonApi
-      .updateBin({
-        id: JSBIN_BIN_ID,
-        data,
-        versioning: false,
-      })
+    return updateBin(
+      JSBIN_BIN_ID,
+      data,
+      false
+    )
   })
 }
 
@@ -52,15 +45,17 @@ const saveVenmo = venmoUsername => {
     jsonApi = new JsonBinIoApi(JSBIN_API_KEY)
   }
   return getEmotions().then(data => {
+    if (!data.venmo_usernames) {
+      data = { venmo_usernames: [] }
+    }
     if (venmoUsername && data.venmo_usernames.indexOf(venmoUsername) === -1) {
       data.venmo_usernames.push(venmoUsername)
     }
-    return jsonApi
-      .updateBin({
-        id: JSBIN_BIN_ID,
-        data,
-        versioning: false,
-      })
+    return updateBin(
+      JSBIN_BIN_ID,
+      data,
+      false
+    )
   })
 }
 
@@ -69,13 +64,15 @@ const saveBook = book => {
     jsonApi = new JsonBinIoApi(JSBIN_API_KEY)
   }
   return getEmotions().then(data => {
+    if (!data.books) {
+      data = { books: [] }
+    }
     data.books.push(book)
-    return jsonApi
-      .updateBin({
-        id: JSBIN_BIN_ID,
-        data,
-        versioning: false,
-      })
+    return updateBin(
+      JSBIN_BIN_ID,
+      data,
+      false
+    )
   })
 }
 

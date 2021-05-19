@@ -97,3 +97,9 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 [![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/import/project?template=https://github.com/gatsbyjs/gatsby-starter-default)
 
 <!-- AUTO-GENERATED-CONTENT:END -->
+
+For JSON Bin:
+
+curl --header "Content-Type: application/json" --header "secret-key: <SECRET_KEY>" --request PUT --data '{"sample": "Hello World"}' https://api.jsonbin.io/b/60a439c8d11a3e3e3f846ff6
+
+https://api.jsonbin.io/b/60a439c8d11a3e3e3f846ff6/latest

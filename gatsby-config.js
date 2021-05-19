@@ -52,6 +52,5 @@ module.exports = {
       },
     },
     `gatsby-plugin-styled-components`,
-    `gatsby-env-variables`,
   ],
 }
