@@ -131,6 +131,8 @@ But instead of all that, let’s talk about ${fun_fact}.
 
 --------------------------------------------------------------------------------------------------------
 
+^^^^ TO CONTINUE, VISIT https://adventuresofyou.online/may-partay-tickets/ ^^^^
+
 * SHELTER ISLAND: THE BAY AREA'S HOTTEST (AND ONLY) DANCE PARTY *
 `
 
@@ -162,8 +164,13 @@ But instead of all that, let’s talk about ${fun_fact}.
     // doc.text can now add those lines easily; otherwise, it would have run text off the screen!
     doc.text(one, margin, margin + 2 * oneLineHeight)
 
-    doc.output('dataurlnewwindow')
-    // doc.save("SHELTER-ISLAND-POVAX-SMALL-TALK-GENERATOR.pdf")
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.platform)
+        || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
+    if (isIOS) {
+      doc.output('dataurlnewwindow')
+    } else {
+      doc.save("SHELTER-ISLAND-POVAX-SMALL-TALK-GENERATOR.pdf")
+    }
 
     // const selfie = document.getElementsByName("selfie")[0].files[0]
     // const reader = new FileReader();
@@ -390,10 +397,12 @@ But instead of all that, let’s talk about ${fun_fact}.
           </div>
 
       <br/>
+
+        <hr/>
       <br/>
 
         <div>
-          When you click Generate, a new tab will open with your story. Take a screeshot or save your story as a PDF and then come back to this page to continue to the next step.
+          When you click Generate, a PDF will be generated with your story. Take a screeshot or save it. Follow the link at the bottom of the PDF for the next step, or come back to this page to continue.
           </div>
 
         <a onClick={this.checkForm}>
