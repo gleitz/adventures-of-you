@@ -106,6 +106,9 @@ const getRandomInt = (min, max) => {
 }
 
 const shuffle = array => {
+  if (!array) {
+    return
+  }
   let currentIndex = array.length,
     temporaryValue,
     randomIndex
