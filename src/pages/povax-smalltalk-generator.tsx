@@ -1,4 +1,4 @@
-/*global jscolor jsPDF */
+/*global jscolor jspdf */
 
 import React from "react"
 
@@ -69,7 +69,7 @@ class EmotionalWorksheetPage extends React.Component {
     const action_verb = document.getElementsByName("action-verb")[0].value || ""
     const fun_fact = document.getElementsByName("fun-fact")[0].value || ""
 
-    if (!place) {
+    if (!fun_fact) {
       alert("Please complete the form, then click Generate")
       return
     }
@@ -141,10 +141,10 @@ But instead of all that, let’s talk about ${fun_fact}.
           fontSize = 8,
           ptsPerInch = 72,
           oneLineHeight = (fontSize * lineHeight) / ptsPerInch,
-          doc = new jsPDF({
+          doc = new jspdf.jsPDF({
             unit: "in",
             lineHeight: lineHeight,
-          }).setProperties({ title: "Worksheet: Emotional Planning for 2020" })
+          }).setProperties({ title: "POVAX SMALL TALK GENERATOR" })
 
     // splitTextToSize takes your string and turns it in to an array of strings,
     // each of which can be displayed within the specified maxLineWidth.
@@ -162,7 +162,8 @@ But instead of all that, let’s talk about ${fun_fact}.
     // doc.text can now add those lines easily; otherwise, it would have run text off the screen!
     doc.text(one, margin, margin + 2 * oneLineHeight)
 
-    doc.save("SHELTER-ISLAND-POVAX-SMALL-TALK-GENERATOR.pdf")
+    doc.output('dataurlnewwindow')
+    // doc.save("SHELTER-ISLAND-POVAX-SMALL-TALK-GENERATOR.pdf")
 
     // const selfie = document.getElementsByName("selfie")[0].files[0]
     // const reader = new FileReader();
@@ -184,6 +185,8 @@ But instead of all that, let’s talk about ${fun_fact}.
     // };
 
     saveEmotion(emotion).then(data => {
+      // const blob = doc.output()
+      // window.open(URL.createObjectURL(blob), "_blank")
       window.location = "/may-partay-tickets"
     })
   }
@@ -379,11 +382,18 @@ But instead of all that, let’s talk about ${fun_fact}.
         </div>
 
           <div className="question">
-            But instead of all that, let's talk about
+            But instead of all that, let's talk about&nbsp;
             <input
               placeholder="fun fact you learned"
               name="fun-fact"
             ></input>.
+          </div>
+
+      <br/>
+      <br/>
+
+        <div>
+          When you click Generate, a new tab will open with your story. Take a screeshot or save your story as a PDF and then come back to this page to continue to the next step.
           </div>
 
         <a onClick={this.checkForm}>

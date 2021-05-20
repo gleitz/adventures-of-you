@@ -24,7 +24,6 @@ const FlatTextCentered = styled.div`
 
 const getEmotions = async () => {
   const result = await readBin(JSBIN_BIN_ID, "latest")
-  debugger;
   return result?.record || {}
 }
 

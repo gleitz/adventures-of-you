@@ -36,7 +36,7 @@ class YouAreLovePage extends React.Component {
       <Layout>
         <SEO title="Pup's Pride Party Ticket" />
         <h1>You made it!</h1>
-        <div>The secret coordinates are <a target="_blank" href="https://goo.gl/maps/53CtAAL9HQkqpWJf8">37°46'17.1"N 122°17'35.1"W</a>.</div>
+        <div>The secret coordinates are <a target="_blank" href="https://goo.gl/maps/53CtAAL9HQkqpWJf8">37°46'17.1"N 122°17'35.1"W</a>. Save that secret address now or play the game again to find it!</div>
         <br />
         <div>The party starts at <b>3PM PST</b> and goes till sunset.</div>
         <br />
@@ -49,9 +49,11 @@ class YouAreLovePage extends React.Component {
         <br />
           <div style={{background: '#eee', padding: 30}}>
             <ul>
-              <li>You'll want to be comfortable and cozy, so bring a picnic blanket, fluffy things, sunscreen, and your dancing shoes.</li>
-              <li>Bring food! Bring drinks! You can get take-out from Abigail's Moroccan Cuisine, Neptune's, Cafe Jolie (until 2PM), or the Bonfare Market.</li>
-              <li>It can get a little windy when the sun goes down so bring a jacket and a hat.</li>
+              <li>We'll be dancing by the water, so bring whatever you need to be comfy and cozy (like picnic blankets, fluffy things for loungin', sunscreen, and your dancing shoes). Terrain is good ol fashioned dirt :)</li>
+<li>No restrooms super close but there's plenty of bushes! Our house is also a couple blocks away and open to anyone who needs.</li>
+              <li>Bring a picnic to make it a party! Local favorite take-out spots are Abigail's Moroccan Cuisine, Neptune's / Cafe Jolie (until 2PM) or the Bonfare Market for drinks and snacks.</li>
+              <li>We'll be fully vaxxed but we encourage all to communicate boundaries around hugging, distance and mask wearing.</li>
+<li>We’ll provide the tunes and a little bit of bubbles. We can’t wait to see you!</li>
               <li>When you're about a mile away, tune into 87.9, Shelter Island Radio.</li>
             </ul>
           </div>

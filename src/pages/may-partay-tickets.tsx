@@ -47,7 +47,7 @@ class MayPartayPage extends React.Component {
             {generateFlatSpot("", GleitzGoggles, Smiley, "100%")}
           </div>
           <div>
-            While today's party is free, all donations to organizations and funds that support indigenous sovereignty and palestinian aid will be matched by May Partay Philanthropists. A few are listed below, but feel free to choose your own.
+            While today's party is free, all donations to organizations and funds that support indigenous sovereignty and Palestinian aid will be matched by May Partay Philanthropists. A few are listed below, but feel free to choose your own.
             </div>
             <div>
               <a target="_blank" href="https://sogoreate-landtrust.org/donate/"><h2>Sogorea Te’ Land Trust</h2></a>
