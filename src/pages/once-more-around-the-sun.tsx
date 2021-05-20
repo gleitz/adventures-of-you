@@ -50,7 +50,7 @@ const IndexPage = () => (
         Want to find the address? Then you better buy a ticket! The price of admission will be a donation to indigenous rights organizations, matched by May Partay Philanthropists.
       </div>
       <div>
-        Game opens <b>May 22</b> at noon with outdoor dance partay from <b>3PM till Sunset</b>. The location will be within biking/driving distance of Oakland.
+        Tickets can be purchased on this page starting <b>May 22</b> at noon with outdoor dance partay from <b>3PM till Sunset</b>. The location will be within biking/driving distance of Oakland.
       </div>
       <div>
       </div>
@@ -66,7 +66,7 @@ const IndexPage = () => (
        */}
   </div>
   <div>
-    Click the circle below to RSVP:
+    Click the circle below to RSVP so you can be reminded when tickets are released:
   </div>
 
   <br/>

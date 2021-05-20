@@ -233,6 +233,9 @@ But instead of all that, let’s talk about ${fun_fact}.
                   <option value="got pregnant">
                     got pregnant
                   </option>
+                  <option value="got together">
+                    got together
+                  </option>
                   <option value="became enemies">
                     became enemies
                   </option>
@@ -260,8 +263,8 @@ But instead of all that, let’s talk about ${fun_fact}.
                   <option value="wonderful">
                     wonderful
                   </option>
-                  <option value="disasterous">
-                    disasterous
+                  <option value="disastrous">
+                    disastrous
                   </option>
                   <option value="just okay">
                     just okay
