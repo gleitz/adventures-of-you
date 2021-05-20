@@ -59,7 +59,7 @@ class YouAreLovePage extends React.Component {
           </div>
                 <br/>
                 <div>
-                  Here's some things people learned recently:
+                  Here's some things people learned about recently:
                   <ul>
                     {this.state.emotions &&
                      this.state.emotions.filter(emotion => !!emotion.fun_fact).slice(0, 6).map((emotion, i) => {
