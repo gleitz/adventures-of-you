@@ -22,8 +22,10 @@ const FlatTextCentered = styled.div`
   pointer-events: none;
 `
 
-const getEmotions = () => {
-  return readBin(JSBIN_BIN_ID, "latest")
+const getEmotions = async () => {
+  const result = await readBin(JSBIN_BIN_ID, "latest")
+  debugger;
+  return result?.record || {}
 }
 
 const saveEmotion = emotion => {
@@ -41,9 +43,6 @@ const saveEmotion = emotion => {
 }
 
 const saveVenmo = venmoUsername => {
-  if (!jsonApi) {
-    jsonApi = new JsonBinIoApi(JSBIN_API_KEY)
-  }
   return getEmotions().then(data => {
     if (!data.venmo_usernames) {
       data = { venmo_usernames: [] }
@@ -60,9 +59,6 @@ const saveVenmo = venmoUsername => {
 }
 
 const saveBook = book => {
-  if (!jsonApi) {
-    jsonApi = new JsonBinIoApi(JSBIN_API_KEY)
-  }
   return getEmotions().then(data => {
     if (!data.books) {
       data = { books: [] }

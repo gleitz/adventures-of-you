@@ -93,8 +93,7 @@ class Captcha extends React.Component {
       }
     })
     if (valid) {
-      // window.location = "/poco-smalltalk-generator"
-      window.location = "/may-partay-tickets"
+      window.location = "/povax-smalltalk-generator"
     }
   }
 

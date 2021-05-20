@@ -33,7 +33,7 @@ class MayPartayPage extends React.Component {
     }
 
     saveEmotion(emotion).then(data => {
-      window.location = "/de-lux-library"
+      window.location = "/may-partay-golden-ticket"
     })
   }
 
