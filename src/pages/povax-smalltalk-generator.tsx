@@ -94,6 +94,7 @@ class EmotionalWorksheetPage extends React.Component {
 
 ${today}
 
+**** TO CONTINUE, VISIT https://adventuresofyou.online/may-partay-tickets/ ****
 
 -------------------------------------------------------------------------------------------------------
 
@@ -130,8 +131,6 @@ After all of this, I’m pretty excited to ${action_verb}.
 But instead of all that, let’s talk about ${fun_fact}.
 
 --------------------------------------------------------------------------------------------------------
-
-^^^^ TO CONTINUE, VISIT https://adventuresofyou.online/may-partay-tickets/ ^^^^
 
 * SHELTER ISLAND: THE BAY AREA'S HOTTEST (AND ONLY) DANCE PARTY *
 `
