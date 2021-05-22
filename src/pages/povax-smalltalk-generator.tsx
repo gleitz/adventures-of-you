@@ -220,7 +220,7 @@ But instead of all that, let’s talk about ${fun_fact}.
 
               <div className="question">
                 <input
-                  placeholder="relationship partner"
+                  placeholder="person"
                   name="relationship-partner"
                 ></input>
                 &nbsp;and I&nbsp;
@@ -254,6 +254,12 @@ But instead of all that, let’s talk about ${fun_fact}.
                   </option>
                   <option value="started seeing other people">
                     started seeing other people
+                  </option>
+                  <option value="have been enjoying each other's company">
+                    have been enjoying each other's company
+                  </option>
+                  <option value="are working on some cool projects">
+                    are working on some cool projects
                   </option>
                 </select>.
                 &nbsp;It's been&nbsp;
@@ -312,7 +318,7 @@ But instead of all that, let’s talk about ${fun_fact}.
                     placeholder="other place"
                     name="other-place"
                   ></input>.
-                  &nbsp;It was pretty
+                  &nbsp;It was pretty&nbsp;
                   <input
                     placeholder="feeling"
                     name="feeling"

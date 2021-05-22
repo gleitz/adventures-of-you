@@ -40,17 +40,17 @@ const IndexPage = () => (
       <br/>
       <i>– Rumi</i>
     </div>
-    <h1 style={{ "textAlign": "center"}}>Save the Date for May 22, 3PM to Sunset!</h1>
-    <a href={mailto}>{generateFlatSpot("RSVP", DogDance, ShelterIsland, "40%")}</a>
+    <h1 style={{ "textAlign": "center"}}>Today is the Day - May 22, 3PM to Sunset!</h1>
+    <a href="/may-partay-captcha">{generateFlatSpot("GO", DogDance, ShelterIsland, "40%")}</a>
     <div className='padded'>
       <div>
       You're invited to <b>Shelter Island: A May Partay</b>, the Bay Area's most sparse dance party. This month we're celebrating the birth of { randomElement(names) }.
       </div>
       <div>
-        Want to find the address? Then you better buy a ticket! The price of admission will be a donation to indigenous rights organizations, matched by May Partay Philanthropists.
+        Want to find the address? Then you better play the game to buy a ticket! The price of admission will be a donation to indigenous rights organizations, matched by May Partay Philanthropists.
       </div>
       <div>
-        Tickets can be purchased on this page starting <b>May 22</b> at noon with outdoor dance partay from <b>3PM till Sunset</b>. The location will be within biking/driving distance of Oakland.
+        Tickets are <a href="/may-partay-captcha">now on sale</a> with outdoor dance partay from <b>3PM till Sunset</b>. The location will be within biking/driving distance of Oakland.
       </div>
       <div>
       </div>
@@ -66,11 +66,11 @@ const IndexPage = () => (
        */}
   </div>
   <div>
-    Click the circle below to RSVP so you can be reminded when tickets are released:
+    Click the circle below to begin:
   </div>
 
   <br/>
-      <a href={mailto}>{generateFlatSpot("🌙", SoulTrain, Calendar, "80%")}</a>
+      <a href="/may-partay-captcha">{generateFlatSpot("BEGIN", SoulTrain, Calendar, "80%")}</a>
   </Layout>
 )
 

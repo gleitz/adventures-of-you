@@ -40,27 +40,34 @@ class YouAreLovePage extends React.Component {
         <br />
         <div>The party starts at <b>3PM PST</b> and goes till sunset.</div>
         <br />
+        <div>See you soon! Here's music for your drive:</div>
+          <br/>
+          <audio controls autoPlay style={{width: '100%'}}>
+            <source src={AdventuresOfYouMp3} type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+          <br/>
+          <br/>
         <div style={{ float: "left", marginRight: "2rem" }}>
-          {generateFlatSpot("", Gif, Still, "75%")}
+          {generateFlatSpot("", Gif, Still, "85%")}
         </div>
         <div>
-          A few notes:
+          Party Notes:
         </div>
         <br />
           <div style={{background: '#eee', padding: 30}}>
             <ul>
-              <li>We'll be dancing by the water, so bring whatever you need to be comfy and cozy (like picnic blankets, fluffy things for loungin', sunscreen, and your dancing shoes). Terrain is good ol fashioned dirt :)</li>
+              <li>We'll be dancing by the water, so bring whatever you need to be comfy and cozy (like picnic blankets, fluffy things for loungin', sunscreen, and your dancing shoes). Terrain is good ol' fashioned dirt :)</li>
 <li>No restrooms super close but there's plenty of bushes! Our house is also a couple blocks away and open to anyone who needs.</li>
               <li>Bring a picnic to make it a party! Local favorite take-out spots are Abigail's Moroccan Cuisine, Neptune's / Cafe Jolie (until 2PM) or the Bonfare Market for drinks and snacks.</li>
-              <li>We'll be fully vaxxed but we encourage all to communicate boundaries around hugging, distance and mask wearing.</li>
+              <li>We'll be fully vaxxed and we encourage all to communicate boundaries around hugging, distance, and mask wearing.</li>
 <li>We’ll provide the tunes and a little bit of bubbles. We can’t wait to see you!</li>
-              <li>When you're about a mile away, tune into 87.9, Shelter Island Radio.</li>
             </ul>
           </div>
                 <br/>
                 <div>
-                  Here's some things people learned about recently:
-                  <ul>
+                  Oh, and here's some things people learned about recently:
+                  <ul style={{marginTop: '8px'}}>
                     {this.state.emotions &&
                      this.state.emotions.filter(emotion => !!emotion.fun_fact).slice(0, 6).map((emotion, i) => {
                        return <li key={i}>{emotion.fun_fact}</li>
@@ -68,12 +75,6 @@ class YouAreLovePage extends React.Component {
                   </ul>
                   </div>
         <br />
-        <div>See you soon! Here's music for your drive:</div>
-          <br/>
-        <audio controls autoPlay style={{width: '100%'}}>
-          <source src={AdventuresOfYouMp3} type="audio/mpeg" />
-          Your browser does not support the audio element.
-        </audio>
                 {/*
         <div>
           Through the ups and downs, you've preserved. It took patience,
