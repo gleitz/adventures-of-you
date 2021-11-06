@@ -103,3 +103,6 @@ For JSON Bin:
 curl --header "Content-Type: application/json" --header "secret-key: <SECRET_KEY>" --request PUT --data '{"sample": "Hello World"}' https://api.jsonbin.io/b/60a439c8d11a3e3e3f846ff6
 
 https://api.jsonbin.io/b/60a439c8d11a3e3e3f846ff6/latest
+
+##TODO
+- Go back to main version of `eslint-plugin-react-hooks`
