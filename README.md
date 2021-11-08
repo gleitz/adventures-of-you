@@ -106,3 +106,9 @@ https://api.jsonbin.io/b/60a439c8d11a3e3e3f846ff6/latest
 
 ##TODO
 - Go back to main version of `eslint-plugin-react-hooks`
+
+- ACL / access
+- Source code message when running (leave a note at the top of the page)
+- Zip file / wget from pod
+- Sampling (works fine if you get the 16GB P100 card)
+- Make your own copy rather than adding people as editor
