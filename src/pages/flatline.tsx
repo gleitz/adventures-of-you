@@ -167,7 +167,7 @@ const FlatlinePage = (): void => {
               // return utterance
             // }).join(' ').trim()
           } else {
-            utterance = dialog
+            utterance = capitalizeFirstLetter(dialog.replace(prompt, '').trim())
             // const turns = dialog.map((turn) => turn['utterance']).map((turn) => {
               // turn = turn.replace(`${text} I think`, '')
               // if (turn && !!turn[turn.length-1].match(/^[0-9a-zA-Z]+$/)) { // sentence does not end with punctuation
