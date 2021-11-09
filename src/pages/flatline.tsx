@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+import { useLocation } from '@reach/router'
 import axios, { AxiosRequestConfig, CancelToken } from "axios"
 
 import TypeIt from "typeit-react"
@@ -59,6 +60,8 @@ const FlatlinePage = (): void => {
   const [url, setUrl] = useState('')
   const [rosenResponse, setRosenResponse] = useState({})
   const [isFirstPerson, setIsFirstPerson] = useState(true)
+
+  const location = useLocation()
 
   const getDixieFlatline = React.useCallback(() => {
     const flatlines = document.getElementsByName("dixie-flatline")
@@ -154,7 +157,7 @@ const FlatlinePage = (): void => {
 
         let dialogs = response.data.results.map((dialog) => {
 
-          dialog = dialog.replaceAll('<|PAD|>', '').replaceAll('<|BOS|>', '').replaceAll('<|UNK|>', '').replaceAll('<|EOS|>', '').replaceAll('<|SP1|>', '\n').replaceAll('<|SP2|>', '\nThem:').trim()
+          dialog = dialog.replaceAll('<|PAD|>', '').replaceAll('<|endoftext|>', '').replaceAll('<|BOS|>', '').replaceAll('<|UNK|>', '').replaceAll('<|EOS|>', '').replaceAll('<|SP1|>', '\n').replaceAll('<|SP2|>', '\nThem:').trim()
 
           let utterance
           if (isFirstPerson) {
@@ -227,6 +230,16 @@ const FlatlinePage = (): void => {
     coreSearch()
   }, [url, coreSearch])
 
+  useEffect(
+    () => {
+      const cleanHash = window.location.hash.replace(/^#/, "")
+      if (cleanHash !== '') {
+        setUrl(cleanHash)
+      }
+    },
+    [location],
+  )
+
   const runSearch = debounce(coreSearch, 1000)
 
   const handleTyping = (event) => {
@@ -254,7 +267,7 @@ const FlatlinePage = (): void => {
         >
           <Grid item xs={12}>
             <label htmlFor="player"><b>Run your Flatline and then paste the ngrok URL here:</b></label>
-            <input name="url" placeholder="Flatline URL" style={{width: '100%'}} type="text" onChange={handleSelectUrl} />
+            <input name="url" placeholder="Flatline URL" value={url} style={{width: '100%'}} type="text" onChange={handleSelectUrl} />
             <br/>
             <br/>
           </Grid>
