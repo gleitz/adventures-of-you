@@ -157,7 +157,7 @@ const FlatlinePage = (): void => {
 
         let dialogs = response.data.results.map((dialog) => {
 
-          dialog = dialog.replaceAll('<|PAD|>', '').replaceAll('<|endoftext|>', '').replaceAll('<|BOS|>', '').replaceAll('<|UNK|>', '').replaceAll('<|EOS|>', '').replaceAll('<|SP1|>', '\n').replaceAll('<|SP2|>', '\nThem:').trim()
+          dialog = dialog.replaceAll('<|PAD|>', '').replaceAll('<|SEP|>', '').replaceAll('<|endoftext|>', '').replaceAll('<|BOS|>', '').replaceAll('<|UNK|>', '').replaceAll('<|EOS|>', '').replaceAll('<|SP1|>', '\n').replaceAll('<|SP2|>', '\nThem:').trim()
 
           let utterance
           if (isFirstPerson) {
