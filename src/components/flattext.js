@@ -52,7 +52,7 @@ export default ({
   width = 5,
   overflowWrap = "anywhere",
 }) => {
-  const colors = shuffle(["cyan", "magenta", "yellow"])
+  const colors = shuffle(["yellow", "magenta", "cyan"])
   return (
     <FlatTextHolder>
       {colors.map(color =>
