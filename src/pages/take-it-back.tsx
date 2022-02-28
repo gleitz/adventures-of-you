@@ -24,7 +24,7 @@ const TakeItBackPage = () => (
         You're invited to <b>Take It Back: Shelter Island</b>, the Bay Area's most sparse dance party.
       </div>
       <div>
-        Want to find the address? Then you better buy a ticket! The price of admission, matched by your Take It Back hosts, will be a donation in support of feminist and LGBTQ+ grassroots rights organizations.
+        Want to find the address? Then you better buy a ticket! The price of admission, matched by your Take It Back hosts, will be a donation in support of feminist and LGBTQ+ grassroots rights organizations in Ukraine.
       </div>
       <div>
         Game opens <b>Sunday</b> at 10AM PST, with dance party from <b>noon till sunset</b>. The location will be in the East Bay.
