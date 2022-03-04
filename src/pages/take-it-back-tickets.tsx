@@ -51,8 +51,8 @@ class TakeItBackTicketsPage extends React.Component {
         <SEO title="Take It Back: Shelter Island Tickets" />
         <h1>Tickets</h1>
         <div className='padded'>
-          <div style={{ float: "right", marginLeft: "0.5rem" }}>
-            {generateFlatSpot("", Soul1, Soul2, "75%")}
+          <div style={{ float: "right", marginLeft: "2rem" }}>
+            {generateFlatSpot("", Soul1, Soul2, "80%")}
           </div>
           <div>
             While today's party is free, your Take It Back hosts will be matching all donations to organizations and funds that support equity and justice. If you're looking for inspiration, below are a few groups in support of feminist and LGBTQ+ rights in Ukraine.
