@@ -26,7 +26,7 @@ class TakeItBackTicketsPage extends React.Component {
     const phoneNumber = document.getElementsByName("phone-number")[0].value
     const onYourMind = document.getElementsByName("on-your-mind")[0].value
     if (!donationName) {
-      alert("Come on - even $5 helps!")
+      alert("Oops, looks like you missed a field. Let us know what you plan to donate, even if it's just your time.")
       return
     }
 
@@ -55,7 +55,7 @@ class TakeItBackTicketsPage extends React.Component {
             {generateFlatSpot("", Soul1, Soul2, "80%")}
           </div>
           <div>
-            While today's party is free, your Take It Back hosts will be matching all donations to organizations and funds that support equity and justice. If you're looking for inspiration, below are a few groups in support of feminist and LGBTQ+ rights in Ukraine.
+            While today's party is free, your Take It Back hosts will be matching all donations to organizations and funds that support racial equity and social justice. If you're looking for inspiration, below are a few groups in support of feminist and LGBTQ+ rights in Ukraine, but you can pick your own.
           </div>
           <div>
             <a target="_blank" href="https://sphere.org.ua/en/"><h2>Sphere</h2></a>
@@ -80,7 +80,7 @@ class TakeItBackTicketsPage extends React.Component {
         </div>
         <textarea placeholder="Who did you you donate to?" className="worksheet-field" name="donation-name"></textarea>
         <textarea placeholder="How much did you give? (we'll match it)" className="worksheet-field" name="donation-amount"></textarea>
-        <textarea placeholder="What would you like others to know about how you're feeling?" className="worksheet-field" name="on-your-mind"></textarea>
+        <textarea placeholder="Share something you've been thinking about or feeling lately. We'll post this anonymously at the end." className="worksheet-field" name="on-your-mind"></textarea>
         <textarea placeholder="(Optional) What is your name?" className="worksheet-field" name="name"></textarea>
         <textarea placeholder="(Optional) What is your phone number? (we'll txt you about the next event)" className="worksheet-field" name="phone-number"></textarea>
         <button id="submit-button" onClick={this.checkForm}>I Donated!</button>
