@@ -80,7 +80,7 @@ class TakeItBackTicketsPage extends React.Component {
         </div>
         <textarea placeholder="Who did you you donate to?" className="worksheet-field" name="donation-name"></textarea>
         <textarea placeholder="How much did you give? (we'll match it)" className="worksheet-field" name="donation-amount"></textarea>
-        <textarea placeholder="What's on your mind?" className="worksheet-field" name="on-your-mind"></textarea>
+        <textarea placeholder="What would you like others to know about how you're feeling?" className="worksheet-field" name="on-your-mind"></textarea>
         <textarea placeholder="(Optional) What is your name?" className="worksheet-field" name="name"></textarea>
         <textarea placeholder="(Optional) What is your phone number? (we'll txt you about the next event)" className="worksheet-field" name="phone-number"></textarea>
         <button id="submit-button" onClick={this.checkForm}>I Donated!</button>

@@ -68,7 +68,7 @@ class TakeItBackGoldenTicketPage extends React.Component {
           </div>
                 <br/>
                 <div>
-                  Oh, and here's some things on people's minds:
+                  Here's what others would you like to know about how they're feeling:
                   <ul style={{marginTop: '8px'}}>
                     {this.state.emotions &&
                      this.state.emotions.filter(emotion => !!emotion.onYourMind).slice(0, 6).map((emotion, i) => {
