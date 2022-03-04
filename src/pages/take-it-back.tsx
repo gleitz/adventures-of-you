@@ -27,7 +27,7 @@ const TakeItBackPage = () => (
         Want to find the address? Then you better buy a ticket! The price of admission, matched by your Take It Back hosts, will be a donation in support of feminist and LGBTQ+ grassroots rights organizations in Ukraine.
       </div>
       <div>
-        Game opens Saturday at 10AM PST, with dance party <b>Sunday noon till sunset</b>. The location will be in the East Bay.
+        You can buy a ticket starting Saturday at 10AM PST, with dance party <b>Sunday noon till sunset</b>. The location will be in the East Bay.
       </div>
       <div>
       </div>
@@ -41,7 +41,7 @@ const TakeItBackPage = () => (
       </div>
   </div>
   <div>
-    Come back this weekend, and click the circle below to begin:
+    YOU'RE INVITED, but you're early. Come back this weekend and click the circle below to begin:
   </div>
   <br/>
   <a href="#">{generateFlatSpot("OPENS SOON", DogDance, ShelterIsland, "75%")}</a>
