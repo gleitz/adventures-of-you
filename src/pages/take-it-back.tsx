@@ -21,7 +21,7 @@ const TakeItBackPage = () => (
     <h1>Save the Date</h1>
     <div className='padded'>
       <div>
-        You're invited to <b>Take It Back: Shelter Island</b>, the Bay Area's most sparse dance party.
+        You're invited to <b>Take It Back: Shelter Island</b>, the Bay Area's most sparse dance party, this <b>Sunday noon till sunset</b>.
       </div>
       <div>
         Want to find the address? Then you better <a href="/take-it-back-captcha">buy a ticket</a>! The price of admission, matched by your Take It Back hosts, will be a donation in support of feminist and LGBTQ+ grassroots rights organizations in Ukraine.
