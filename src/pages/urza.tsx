@@ -2,6 +2,8 @@ import React, { useMemo } from "react"
 
 import "../components/urza.css"
 
+const replaceAll = require('string.prototype.replaceall')
+
 import redBackground from "../images/urza/gen-bg-R.jpg"
 import whiteBackground from "../images/urza/gen-bg-W.jpg"
 import artifactBackground from "../images/urza/gen-bg-A.jpg"
@@ -209,7 +211,7 @@ const UrzasPage = () => {
         return card.types + " ";
       })(),
       descriptionWithImages: (() => {
-        return card.text.replaceAll(iconRegex, (_, symbol) => {
+        return replaceAll(card.text, iconRegex, (_, symbol) => {
           return getIconHtml(symbol);
         });
       })(),
@@ -225,7 +227,7 @@ const UrzasPage = () => {
   }, [card, cardColor])
 
   const textToHtml = (text, isLarge) => {
-    return text.replaceAll(iconRegex, (_, symbol) => {
+    return replaceAll(text, iconRegex, (_, symbol) => {
       return getIconHtml(symbol, isLarge);
     });
   }
