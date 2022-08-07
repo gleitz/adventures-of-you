@@ -1,4 +1,4 @@
-import React, { useMemo } from "react"
+import React, { useMemo, useState, useEffect } from "react"
 
 import "../components/urza.css"
 
@@ -113,38 +113,38 @@ const css = `
     box-sizing:border-box;
 }
 `
+let card
+try {
+  card = JSON.parse(new URLSearchParams(location.search).get('card'))
+  if (card === null) {
+    throw new Error('No card provided');
+  }
+
+} catch {
+  card = {
+    "basic_land": "",
+    "cardId": "a733af48-332d-484a-9573-98d6db247ad1",
+    "deck_name": "",
+    "flavorText": "When some stars fell from the sky, many nights were extinguished.",
+    "loyalty": "",
+    "manaCost": "{R}",
+    "name": "Torching up",
+    "power": "",
+    "rarity": "common",
+    "subtypes": "",
+    "text": "Torching up deals 1 damage to target creature.",
+    "toughness": "",
+    "types": "Instant",
+    "url": tempImage
+  }
+}
 
 const UrzasPage = () => {
 
-  // if (typeof window !== "undefined") {
-    // const [card, setCard] = useQueryParam("card", JsonParam)
-  // } else {
-
-  let card
-  try {
-    card = JSON.parse(new URLSearchParams(location.search).get('card'))
-    if (card === null) {
-      throw new Error('No card provided');
-    }
-
-  } catch {
-    card = {
-      "basic_land": "",
-      "cardId": "a733af48-332d-484a-9573-98d6db247ad1",
-      "deck_name": "",
-      "flavorText": "When some stars fell from the sky, many nights were extinguished.",
-      "loyalty": "",
-      "manaCost": "{R}",
-      "name": "Torching up",
-      "power": "",
-      "rarity": "common",
-      "subtypes": "",
-      "text": "Torching up deals 1 damage to target creature.",
-      "toughness": "",
-      "types": "Instant",
-      "url": tempImage
-    }
-  }
+  const [isClient, setClient] = useState(false)
+  useEffect(() => {
+    setClient(true);
+  }, []);
 
   const { cardColor } = useMemo(() => {
     return {
@@ -238,8 +238,12 @@ const UrzasPage = () => {
      <h1>Black History</h1>
    */}
 
+  if ( !isClient ) {
+    return null;
+  }
+
   return (
-    <div className="card-container-holder">
+    <div className={`card-container-holder loaded-${isClient}`} suppressHydrationWarning>
       <style>{css}</style>
       <div className='padded'>
         <div className="card" id="card">
