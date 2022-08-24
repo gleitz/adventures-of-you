@@ -271,7 +271,7 @@ p {
   margin: 0 10px;
 }
 
-.power-toughness-container {
+.power-toughness-container{
   position: absolute;
   bottom: -12px;
   right: -19px;
@@ -764,7 +764,8 @@ p{
   bottom:-12px;
   right:-19px;
   width:60px;
-  color:#000
+  color:#000;
+  height: 30px !important;
 }
 .power-toughness-text{
   font-weight:550;

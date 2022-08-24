@@ -115,7 +115,12 @@ const css = `
 `
 let card
 try {
-  card = JSON.parse(new URLSearchParams(location.search).get('card'))
+  const params = new URLSearchParams(location.search)
+  if (params.get('encoded') === 1) {
+    card = JSON.parse(decodeURIComponent(params.get('card')))
+  } else {
+    card = JSON.parse(new URLSearchParams(location.search).get('card'))
+  }
   if (card === null) {
     throw new Error('No card provided');
   }
