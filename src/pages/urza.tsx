@@ -1,4 +1,5 @@
 import React, { useMemo, useState, useEffect } from "react"
+import { Helmet } from 'react-helmet'
 
 import "../components/urza.css"
 
@@ -144,6 +145,7 @@ try {
   }
 }
 
+
 const UrzasPage = () => {
 
   const [isClient, setClient] = useState(false)
@@ -237,18 +239,15 @@ const UrzasPage = () => {
     });
   }
 
-  {/*
-     <Layout>
-     <SEO title="Shelter Island De Lux Library" />
-     <h1>Black History</h1>
-   */}
-
   if ( !isClient ) {
     return null;
   }
 
   return (
     <div className={`card-container-holder loaded-${isClient}`} suppressHydrationWarning>
+      <Helmet>
+        <title>{card.name}</title>
+      </Helmet>
       <style>{css}</style>
       <div className='padded'>
         <div className="card" id="card">
