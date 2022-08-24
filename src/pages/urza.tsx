@@ -263,6 +263,7 @@ const UrzasPage = () => {
                   {card.url
                    ? <img
                        className={`frame-art ${cardColor}`}
+                       crossOrigin="anonymous"
                        src={card.url}
                        alt="art"
                      />
